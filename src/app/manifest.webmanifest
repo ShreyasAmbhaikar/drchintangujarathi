@@ -1,17 +1,16 @@
 {
-  "name": "Ferlix IVF & Fertility Clinic",
-  "short_name": "Ferlix IVF",
-  "description": "Compassionate care and cutting-edge science for your IVF journey.",
+  "name": "Dr. Poonam's Women's Clinic",
+  "short_name": "Dr. Poonam's Clinic",
+  "description": "Dr. Poonam's Women's Clinic is a leading gynecologist clinic in Keshav Nagar, Pune offering comprehensive women's healthcare.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#242736",
   "icons": [
     {
-      "src": "/images/favicon.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
     }
   ]
 }

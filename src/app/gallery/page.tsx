@@ -71,20 +71,6 @@ export default function GalleryPage() {
       categoryLabel: "Consulting Suite",
       title: "Dr. Poonam with Patient",
     },
-    {
-      id: 13,
-      src: "/images/gallery-newborn-delivery.webp",
-      alt: "Dr. Poonam celebrating a successful newborn delivery with parents in the recovery room",
-      categoryLabel: "Patient Care",
-      title: "Newborn Delivery Celebration",
-    },
-    {
-      id: 14,
-      src: "/images/gallery-operation-theater.webp",
-      alt: "Dr. Poonam with parents in the sterile operation theater/surgical room",
-      categoryLabel: "Patient Care",
-      title: "Surgical Delivery Preparation",
-    },
   ];
 
   const openLightbox = (index: number) => {
