@@ -62,10 +62,10 @@ export default function Header() {
   return (
     <>
       <header
-        className={`sticky top-0 w-full z-40 transition-all duration-300 ${
+        className={`sticky top-0 w-full z-50 transition-all duration-300 ${
           scrolled
-            ? 'bg-[#FBF9F5]/95 backdrop-blur-md shadow-[0_4px_24px_-4px_rgba(37,32,46,0.07)] border-b border-[#9F8EB9]/15'
-            : 'bg-transparent'
+            ? 'bg-[#FBF9F5]/98 backdrop-blur-md shadow-[0_4px_24px_-4px_rgba(37,32,46,0.08)] border-b border-[#9F8EB9]/20'
+            : 'bg-[#FBF9F5]/95 backdrop-blur-md shadow-[0_2px_12px_-3px_rgba(37,32,46,0.04)] border-b border-[#9F8EB9]/15'
         }`}
       >
         <div className="max-w-[1280px] relative mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
