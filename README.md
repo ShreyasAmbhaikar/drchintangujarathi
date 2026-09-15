@@ -1,14 +1,26 @@
-# Dr. Poonam's Women's Clinic - Website
+# Dr. Chintan Gujarathi — Plastic, Cosmetic & Reconstructive Surgeon, Pune
 
-This is a modern Next.js project built with TailwindCSS, optimized for speed, SEO, and local discovery for **Dr. Poonam's Women's Clinic** located in Keshav Nagar, Mundhwa, Pune.
+Official website and high-performance clinical platform for **Dr. Chintan Gujarathi** (MBBS, MS, MCh Plastic Surgery, DrNB, Tata Memorial Hospital Fellow), Senior Consultant Plastic, Cosmetic & Reconstructive Surgeon practicing at **Ruby Hall Clinic** and **Manipal Hospital Kharadi, Pune**.
 
-## Features
-- **High-Performance Architecture**: Built with Next.js App Router and statically rendered pages for maximum Core Web Vitals performance.
-- **Local SEO & Schema Markup**: Integrated Physician, MedicalBusiness, and Breadcrumb JSON-LD structured data for local search dominance.
-- **Responsive & Accessible**: Optimized for mobile, tablet, and desktop viewports with fluid typography and intuitive navigation.
-- **Service Pages**: Dedicated clinical pages for maternity care, gynecology, laparoscopic procedures, and fertility counseling.
+---
 
-## Getting Started
+## 🌟 Key Features
+
+- **Next.js 16 (App Router) & Turbopack**: Ultra-fast statically pre-rendered routes for 100% Core Web Vitals score.
+- **Tailwind CSS & Framer Motion**: Responsive, luxury dark amethyst (`#9784B4`) & warm cream (`#FBF9F5`) palette with smooth slide-over mobile drawer navigation.
+- **Comprehensive Clinical Procedures**: 30 dedicated procedure pages featuring interactive surgical approach switchers, recovery timelines, and transparent Pune pricing FAQs.
+- **SEO & Medical Schema Markup**: Fully integrated `MedicalProcedure`, `FAQPage`, and `Physician` JSON-LD schemas validated for medical search discovery.
+- **Interactive Patient Tools**: Before/after comparison sliders, procedure lightbox modals, and one-tap consultation booking.
+
+---
+
+## 🚀 Getting Started
+
+First, install dependencies:
+
+```bash
+npm install
+```
 
 Run the development server:
 
@@ -16,11 +28,14 @@ Run the development server:
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to view the application.
 
-## Production Build
+---
+
+## 📦 Production Build
 
 ```bash
 npm run build
 npm run start
 ```
+

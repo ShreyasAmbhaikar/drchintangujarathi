@@ -1,11 +1,11 @@
 {
-  "name": "Dr. Poonam's Women's Clinic",
-  "short_name": "Dr. Poonam's Clinic",
-  "description": "Dr. Poonam's Women's Clinic is a leading gynecologist clinic in Keshav Nagar, Pune offering comprehensive women's healthcare.",
+  "name": "Dr. Chintan Gujarathi",
+  "short_name": "Dr. Chintan G.",
+  "description": "Best Plastic, Cosmetic & Reconstructive Surgeon in Pune",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#242736",
+  "background_color": "#0E0E14",
+  "theme_color": "#0A0A0F",
   "icons": [
     {
       "src": "/favicon.ico",

@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# large media & video frames
+*.mp4
+public/hd-frames/
+public/video-frames/
+public/video frames/

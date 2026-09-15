@@ -17,4 +17,4 @@ Allow: /
 User-agent: FacebookBot
 Allow: /
 
-Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://drchintangujarathi.com/sitemap.xml

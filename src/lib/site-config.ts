@@ -1,81 +1,703 @@
-export const siteConfig = {
-  name: "Dr. Poonam's Women's Clinic",
-  shortName: "Dr. Poonam's Clinic",
-  description: "Dr. Poonam's Women's Clinic is a leading gynecologist clinic in Keshav Nagar, Pune. Led by Dr. Poonam (MBBS, DGO, PGDMCH), senior obstetrician-gynecologist, offering expert care in normal delivery, infertility, IUI, PCOD, and laparoscopic procedures.",
-  url: "https://yourdomain.com", // update to client domain when active
-  logo: "/images/logo-women-health.svg",
-  footerLogo: "/images/footer-logo.svg",
-  
+// ─── Dr. Chintan Gujarathi — Site Configuration ───
+// Central source of truth for all site data, procedures, locations, and SEO
+
+export const SITE_CONFIG = {
+  name: "Dr. Chintan Gujarathi",
+  tagline: "Plastic, Cosmetic & Reconstructive Surgeon",
+  shortTagline: "Precision. Artistry. Restoration.",
+  domain: "https://drchintangujarathi.com",
+
   doctor: {
-    name: "Dr. Poonam",
-    qualifications: "MBBS, DGO, PGDMCH",
-    role: "Senior Consultant Obstetrician & Gynecologist",
-    experience: "+15 Years"
+    fullName: "Dr. Chintan Gujarathi",
+    displayName: "Dr. Chintan Gujarathi",
+    qualifications: "MBBS, MS (General Surgery), MCh (Plastic Surgery), DrNB",
+    qualificationsList: [
+      { abbr: "MBBS", full: "Bachelor of Medicine, Bachelor of Surgery" },
+      { abbr: "MS", full: "Master of Surgery (General Surgery)" },
+      { abbr: "MCh", full: "Magister Chirurgiae (Plastic & Reconstructive Surgery)" },
+      { abbr: "DrNB", full: "Doctorate of National Board (Plastic Surgery)" },
+    ],
+    designation: "Senior Consultant Plastic, Cosmetic, Reconstructive & Microvascular Surgeon",
+    experience: "15+",
+    experienceLabel: "Years of Experience",
+    microsurgeries: "500+",
+    microsurgeriesLabel: "Successful Microsurgeries",
+    satisfaction: "98%",
+    satisfactionLabel: "Patient Satisfaction",
+    bio: "Dr. Chintan Gujarathi is a renowned Plastic, Reconstructive and Cosmetic Surgeon in Pune with 15+ years of surgical experience. With super-specialty training in Plastic Surgery (MCh, DrNB) and specialized observerships at Tata Memorial Hospital (Mumbai) and Ganga Hospital (Coimbatore), he combines surgical precision with aesthetic artistry to deliver natural-looking, life-changing results.",
+    bioExtended: "Specializing in both aesthetic enhancements and complex reconstructive procedures, Dr. Gujarathi has performed over 500 successful head & neck reconstructions and microvascular free flaps. His expertise spans rhinoplasty, facelift, body shaping, gynecomastia, burn reconstruction, hand surgery, facial fractures, and diabetic foot salvage. He practices at Ruby Hall Clinic (Sassoon Rd) and Manipal Hospital (Kharadi).",
+    philosophy: "Every patient deserves a personalized approach that combines medical excellence with compassionate care. My goal is to help you achieve results that look natural, feel confident, and restore function — all while maintaining the highest standards of safety.",
+    affiliations: [
+      { name: "APSI", full: "Association of Plastic Surgeons of India" },
+      { name: "ISAPS", full: "International Society of Aesthetic Plastic Surgery" },
+      { name: "MMC", full: "Maharashtra Medical Council" },
+    ],
+    training: [
+      { year: "Foundational", title: "MBBS", institution: "Foundational Medical Training" },
+      { year: "Postgraduate", title: "MS (General Surgery)", institution: "Master of Surgery Residency" },
+      { year: "Super-Specialty", title: "MCh (Plastic Surgery)", institution: "Super-specialty Residency" },
+      { year: "Board Certified", title: "DrNB (Plastic Surgery)", institution: "National Board of Examinations" },
+      { year: "2018", title: "Tata Memorial Observership", institution: "Tata Memorial Hospital, Mumbai" },
+      { year: "Specialized", title: "Ganga Hospital Observership", institution: "Ganga Hospital, Coimbatore" },
+    ],
   },
 
-  // NAP (Name, Address, Phone) details
   contact: {
-    phone: "097119 29529",
-    phoneRaw: "+919711929529",
-    address: "Shop No 33, Shopping Complex, Mantra Mesmer Rd, in front of Florida River Bank, Keshav Nagar, Mundhwa, Mundhawa, Pune, Maharashtra 411036",
-    hours: {
-      weekday: "Monday to Saturday (10am - 2pm, 6pm - 9pm)",
-      sunday: "Sunday (Closed)"
+    phone: "+917977429688",
+    phoneDisplay: "079774 29688",
+    whatsapp: "+917977429688",
+    email: "drchintangujarathi@gmail.com",
+    googleRating: 5.0,
+    googleReviewCount: 5,
+    googleMapsUrl: "https://www.google.com/maps/place/Dr.+Chintan+Gujarathi+%E2%80%93+Plastic+Surgeon,+Cosmetic+Surgeon+%26+Reconstructive+Surgeon+in+Pune/data=!4m2!3m1!1s0x0:0xad0ff4399a4c0f2b?sa=X&ved=1t:2428&hl=en&ictx=111",
+  },
+
+  locations: [
+    {
+      id: "ruby-hall-sassoon",
+      name: "Ruby Hall Clinic, Sassoon Road",
+      hospital: "Ruby Hall Clinic",
+      area: "Sassoon Road, Pune",
+      address: "Ruby Hall Clinic, 102, 1st Floor, Cancer Building, Sasoon Rd, Pune, Maharashtra 411001",
+      phone: "079774 29688",
+      isPrimary: true,
+      timings: "Mon – Sat: 9:00 AM – 9:00 PM | Sun: Closed",
+      mapUrl: "https://www.google.com/maps/place/Dr.+Chintan+Gujarathi+%E2%80%93+Plastic+Surgeon,+Cosmetic+Surgeon+%26+Reconstructive+Surgeon+in+Pune/@18.5364568,73.8804871,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2c15549ee24d1:0xad0ff4399a4c0f2b!8m2!3d18.5364568!4d73.8804871!16s%2Fg%2F11njryynkj?hl=en&entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+      embedMapUrl: "https://maps.google.com/maps?q=18.5364568,73.8804871&t=&z=16&ie=UTF8&iwloc=&output=embed",
+      logo: "/images/logos/ruby-hall-clinic-logo.png",
+      coordinates: { lat: 18.5364568, lng: 73.8804871 },
     },
-    hoursShort: "Mo,Tu,We,Th,Fr,Sa 10:00-14:00 18:00-21:00",
-    mapsLink: "https://www.google.com/maps/place/Dr+Poonam's+Women's+Clinic+%7C+Gynecologist/data=!4m2!3m1!1s0x0:0xd39aed6b8c64a153?sa=X&ved=1t:2428&hl=en&ictx=111",
-    embedMapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.1873138883656!2d73.9392261!3d18.520412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1d9161a0bc5%3A0xd39aed6b8c64a153!2sDr%20Poonam&#39;s%20Women&#39;s%20Clinic%20%7C%20Gynecologist!5e0!3m2!1sen!2sin!4v1716912345678"
-  },
-
-  // Social handles
-  socials: {
-    facebook: "#",
-    instagram: "#",
-    linkedin: "#",
-    dribbble: "#"
-  },
-
-  // Google reviews
-  reviews: {
-    rating: "5.0",
-    count: "42"
-  },
-
-  // Service Areas
-  serviceAreas: {
-    primary: "Keshav Nagar",
-    secondary: ["Mundhwa", "Hadapsar", "Magarpatta", "Kharadi", "Pune"]
-  },
-
-  // Core services list from client image flyer
-  services: [
-    { title: "Normal Delivery", desc: "Expert prenatal care, labor support, and natural child birth facilitation." },
-    { title: "LSCS (Caesarean Section)", desc: "Safe, sterile, and professional surgical delivery when medically indicated." },
-    { title: "Infertility, IUI, IVF", desc: "Advanced fertility testing, Intrauterine Insemination, and In Vitro Fertilization support." },
-    { title: "Scarless Hysterectomy (NDVH)", desc: "Non-descent vaginal hysterectomy for uterine conditions without abdominal incisions." },
-    { title: "PCOD Care", desc: "Holistic management of PCOS/PCOD with lifestyle advice, medical therapy, and symptom control." },
-    { title: "Cervical Cancer Vaccination and Screening", desc: "Preventative HPV vaccine administration and regular Pap smear testing." },
-    { title: "Pre Conceptional Counselling", desc: "Health check-ups, lifestyle advice, and preparation plans for couples planning pregnancy." },
-    { title: "MTP, D & E", desc: "Safe, legal, and confidential medical termination of pregnancy and dilation & evacuation services." },
-    { title: "Tubal Ligation & Reversal", desc: "Permanent female contraception and microsurgical tubal re-canalization." },
-    { title: "Laparoscopic Procedure", desc: "Minimally invasive keyhole surgeries for ovarian cysts, fibroids, and diagnostic laparoscopy." }
+    {
+      id: "manipal-kharadi",
+      name: "Manipal Hospital, Kharadi",
+      hospital: "Manipal Hospital",
+      area: "Kharadi, Pune",
+      address: "Manipal Hospital, 22/2A, Mundwa -Kharadi Rd, near Nyati Empire, Santipur, Thite Nagar, Kharadi, Pune, Maharashtra 411014",
+      phone: "079774 29688",
+      isPrimary: false,
+      timings: "Mon – Sat: 9:00 AM – 9:00 PM | Sun: Closed",
+      mapUrl: "https://www.google.com/maps/place/Dr.+Chintan+S.+Gujarathi+%7C+Plastic,+Reconstructive+and+Cosmetic+Surgeon+in+Kharadi/@18.5410783,73.935716,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2c15214f8c96b:0xcaef3dc60e93f0d2!8m2!3d18.5410783!4d73.935716!16s%2Fg%2F11nr3bzgck?hl=en&entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+      embedMapUrl: "https://maps.google.com/maps?q=18.5410783,73.935716&t=&z=16&ie=UTF8&iwloc=&output=embed",
+      logo: "/images/logos/manipal-hospital-kharadi-logo.png",
+      coordinates: { lat: 18.5410783, lng: 73.935716 },
+    },
   ],
 
-  // Target SEO Keywords
-  keywords: [
-    "gynecologist in keshav nagar",
-    "gynecologist keshav nagar",
-    "gynecologist in mundhwa",
-    "obstetrician gynecologist in pune",
-    "fertility clinic keshav nagar",
-    "women's health center mundhwa",
-    "pregnancy care clinic keshav nagar",
-    "best gynecologist hadapsar",
-    "obstetrician in kharadi",
-    "PCOD treatment keshav nagar",
-    "IUI specialist pune",
-    "normal delivery doctor keshav nagar"
-  ]
+  stats: [
+    { value: "15+", label: "Years Experience", suffix: "" },
+    { value: "500+", label: "Microsurgeries", suffix: "" },
+    { value: "98%", label: "Patient Satisfaction", suffix: "" },
+    { value: "4", label: "Hospital Locations", suffix: "" },
+  ],
+
+  // ─── 4 Official Clinical Categories (From Ruby Hall Clinic Specialty Board) ───
+  serviceCategories: [
+    {
+      id: "facial-aesthetic",
+      title: "Facial & Cosmetic Surgery",
+      shortTitle: "Facial Aesthetics",
+      description: "Artistic and reconstructive facial surgery restoring anatomical balance, youthful contours, and skeletal integrity.",
+      badge: "Face & Neck",
+      icon: "Sparkles",
+      procedures: [
+        {
+          slug: "facelift",
+          title: "Facelift, Neck Lift & Brow Lift",
+          shortDesc: "Deep-plane SMAS facelift, cervical platysmaplasty, and endoscopic brow lifting for natural rejuvenation.",
+          bannerNo: "16",
+          icon: "Gem",
+        },
+        {
+          slug: "rhinoplasty",
+          title: "Rhinoplasty (Nose Reshaping)",
+          shortDesc: "Open and closed aesthetic nose surgery for hump reduction, tip refinement, and septoplasty breathing correction.",
+          bannerNo: "Featured",
+          icon: "Sparkles",
+        },
+        {
+          slug: "blepharoplasty",
+          title: "Blepharoplasty (Eyelid Surgery)",
+          shortDesc: "Upper and lower blepharoplasty for removal of redundant eyelid skin and herniated peri-orbital fat bags.",
+          bannerNo: "Featured",
+          icon: "Eye",
+        },
+        {
+          slug: "facial-bone-fractures",
+          title: "Facial Bone Fracture Fixation",
+          shortDesc: "Rigid internal fixation with titanium mini-plates for mandibular, zygomatic, maxillary, and orbital fractures.",
+          bannerNo: "3",
+          icon: "ShieldPlus",
+        },
+        {
+          slug: "cosmetic-facial-suturing",
+          title: "Cosmetic Suturing of Facial Cuts & Lacerations",
+          shortDesc: "Emergency microsurgical layered closure of facial wounds and accidental lacerations to minimize scar visibility.",
+          bannerNo: "5",
+          icon: "Scissors",
+        },
+        {
+          slug: "ear-lobule-deformity-correction",
+          title: "Torn Ear Lobule & Ear Deformity Correction",
+          shortDesc: "Aesthetic repair of split earlobes, stretched piercings, and congenital/acquired prominent ear (otoplasty) correction.",
+          bannerNo: "12",
+          icon: "Activity",
+        },
+        {
+          slug: "facial-enhancements-buccal-dimple",
+          title: "Dimple Creation, Buccal Fat & Tongue Tie",
+          shortDesc: "Surgical cheek dimple creation, buccal fat pad extraction for facial contouring, and frenuloplasty tongue tie release.",
+          bannerNo: "15",
+          icon: "Smile",
+        },
+        {
+          slug: "anti-aging-botox-fillers",
+          title: "Ageing Face Treatments (Botox & Dermal Fillers)",
+          shortDesc: "Injectable facial rejuvenation for dynamic forehead lines, crow's feet, tear troughs, nasolabial folds, and lip enhancement.",
+          bannerNo: "14",
+          icon: "Droplets",
+        },
+      ],
+    },
+    {
+      id: "body-breast",
+      title: "Body Contouring & Breast Surgery",
+      shortTitle: "Body & Breast",
+      description: "Advanced surgical sculpting, high-definition body contouring, and aesthetic/reconstructive breast procedures.",
+      badge: "Contour & Shape",
+      icon: "Shield",
+      procedures: [
+        {
+          slug: "gynecomastia-surgery",
+          title: "Gynecomastia Surgery (Male Chest Reduction)",
+          shortDesc: "Targeted subareolar gland excision combined with VASER liposuction for a firm, masculine chest contour.",
+          bannerNo: "19",
+          icon: "Shield",
+        },
+        {
+          slug: "liposuction",
+          title: "Liposuction 360° & Body Sculpting",
+          shortDesc: "High-definition VASER liposuction for abdomen, flanks, back, and thighs for athletic definition.",
+          bannerNo: "17",
+          icon: "Activity",
+        },
+        {
+          slug: "abdominoplasty",
+          title: "Abdominoplasty (Tummy Tuck) & Mommy Makeover",
+          shortDesc: "Abdominal muscle repair (diastasis recti), excess skin elimination, and combined post-pregnancy Mommy Makeovers.",
+          bannerNo: "17",
+          icon: "Minimize2",
+        },
+        {
+          slug: "arm-and-thigh-lift",
+          title: "Arm Lift (Brachioplasty) & Thigh Lift",
+          shortDesc: "Targeted surgical removal of lax, sagging skin on arms and thighs following massive weight loss or aging.",
+          bannerNo: "18",
+          icon: "Flame",
+        },
+        {
+          slug: "breast-augmentation",
+          title: "Breast Surgery (Implants, Lift & Reduction)",
+          shortDesc: "Dual-plane silicone breast implants, mastopexy breast lifting, and bilateral breast reduction for back pain relief.",
+          bannerNo: "20",
+          icon: "Heart",
+        },
+        {
+          slug: "genital-rejuvenation",
+          title: "Genital Rejuvenation (Hymenoplasty & Labiaplasty)",
+          shortDesc: "Confidential intimate female surgical rejuvenation including labiaplasty reduction and reconstructive hymenoplasty.",
+          bannerNo: "21",
+          icon: "Sparkles",
+        },
+      ],
+    },
+    {
+      id: "reconstructive-wounds",
+      title: "Reconstructive Microsurgery & Wounds",
+      shortTitle: "Reconstruction",
+      description: "Super-specialty free tissue transfer, critical burn trauma management, and complex limb and wound salvage.",
+      badge: "Microsurgery",
+      icon: "Microscope",
+      procedures: [
+        {
+          slug: "cancer-reconstruction",
+          title: "Cancer Reconstructive Surgery (Free Flaps)",
+          shortDesc: "Tata Memorial-trained microvascular tissue transfer (ALT, DIEP, fibula) for post-cancer head, neck & breast reconstruction.",
+          bannerNo: "7",
+          icon: "HeartPulse",
+        },
+        {
+          slug: "burns-reconstruction",
+          title: "Burn Surgeries & Acute Burn Care",
+          shortDesc: "Acute burn resuscitation, split-thickness skin grafting, tangential excision, and burn scar contracture release.",
+          bannerNo: "1",
+          icon: "Flame",
+        },
+        {
+          slug: "trauma-reconstruction",
+          title: "Trauma Plastic Surgery & Defect Repair",
+          shortDesc: "Emergency high-energy accident soft tissue coverage, local/regional flap coverage, and limb salvage reconstruction.",
+          bannerNo: "2",
+          icon: "ShieldPlus",
+        },
+        {
+          slug: "chronic-wound-management",
+          title: "Chronic Wound Care (Diabetic Foot & Bed Sores)",
+          shortDesc: "Advanced debridement, negative-pressure VAC therapy, and flap coverage for diabetic ulcers, bedsores & pilonidal sinus.",
+          bannerNo: "6",
+          icon: "Activity",
+        },
+        {
+          slug: "av-fistula-creation",
+          title: "AV Fistula Creation for Dialysis",
+          shortDesc: "Microsurgical vascular access anastomosis (radiocephalic and brachiocephalic arteriovenous fistulas) for renal patients.",
+          bannerNo: "8",
+          icon: "Zap",
+        },
+      ],
+    },
+    {
+      id: "hand-specialized",
+      title: "Hand, Nerve & Specialized Surgery",
+      shortTitle: "Hand & Specialized",
+      description: "Fine microsurgical hand repairs, peripheral nerve decompression, congenital pediatric anomalies, and skin lesions.",
+      badge: "Super-Specialty",
+      icon: "Hand",
+      procedures: [
+        {
+          slug: "hand-surgery",
+          title: "Hand Surgery & Carpal Tunnel Release",
+          shortDesc: "Microsurgical median nerve release, flexor and extensor tendon repairs, and post-traumatic hand reconstruction.",
+          bannerNo: "4A",
+          icon: "Hand",
+        },
+        {
+          slug: "nail-injuries-fingertip-repair",
+          title: "Nail Bed Injuries & Fingertip Repair",
+          shortDesc: "Delicate repair of subungual hematomas, crushed nail beds, and local flap cover for fingertip amputations.",
+          bannerNo: "4B",
+          icon: "Scissors",
+        },
+        {
+          slug: "peripheral-nerve-surgery",
+          title: "Nerve & Muscle Biopsies & Nerve Surgery",
+          shortDesc: "Diagnostic nerve and muscle biopsy harvesting, peripheral nerve tumor excision, and microsurgical nerve grafting.",
+          bannerNo: "10",
+          icon: "Microscope",
+        },
+        {
+          slug: "excision-cysts-lipomas-ganglion",
+          title: "Excision of Cysts, Lipomas, Ganglions & Warts",
+          shortDesc: "Outpatient surgical excision of sebaceous cysts, subcutaneous lipomas, wrist ganglions, warts, and skin tags.",
+          bannerNo: "13",
+          icon: "Minimize2",
+        },
+        {
+          slug: "pediatric-plastic-surgery",
+          title: "Pediatric Plastic Surgery (Cleft Lip, Palate & Circumcision)",
+          shortDesc: "Congenital defect restoration including cheiloplasty for cleft lip, palatoplasty for cleft palate, and circumcision.",
+          bannerNo: "9",
+          icon: "Heart",
+        },
+        {
+          slug: "scar-revision",
+          title: "Treatment of Scars & Keloids",
+          shortDesc: "Z-plasty scar realignment, intralesional steroid therapy, silicone sheeting, and surgical keloid excision.",
+          bannerNo: "11",
+          icon: "Scissors",
+        },
+      ],
+    },
+  ],
+
+  // Backward compatibility mappings
+  procedures: {
+    cosmetic: [
+      {
+        slug: "gynecomastia-surgery",
+        title: "Gynecomastia Surgery",
+        shortDesc: "Male breast reduction using minimally invasive gland excision and liposuction techniques for a sculpted, masculine chest contour.",
+        icon: "Shield",
+      },
+      {
+        slug: "rhinoplasty",
+        title: "Rhinoplasty",
+        shortDesc: "Nose reshaping surgery including hump reduction, tip refinement, and septoplasty for improved aesthetics and breathing.",
+        icon: "Sparkles",
+      },
+      {
+        slug: "liposuction",
+        title: "Liposuction & Body Contouring",
+        shortDesc: "High-definition 360° liposuction and VASER liposuction for targeted fat removal and body sculpting.",
+        icon: "Activity",
+      },
+      {
+        slug: "abdominoplasty",
+        title: "Abdominoplasty (Tummy Tuck)",
+        shortDesc: "Full or mini tummy tuck surgery to tighten abdominal muscles and remove excess skin for a flatter contour.",
+        icon: "Minimize2",
+      },
+      {
+        slug: "breast-augmentation",
+        title: "Breast Augmentation & Lift",
+        shortDesc: "Breast enhancement with silicone implants or autologous fat transfer, and mastopexy for lifting and reshaping.",
+        icon: "Heart",
+      },
+      {
+        slug: "facelift",
+        title: "Facelift & Neck Lift",
+        shortDesc: "Deep plane and SMAS facelift techniques for facial rejuvenation, jawline definition, and neck contouring.",
+        icon: "Gem",
+      },
+      {
+        slug: "blepharoplasty",
+        title: "Blepharoplasty (Eyelid Surgery)",
+        shortDesc: "Upper and lower eyelid rejuvenation to remove puffiness, eye bags, and restore a youthful eye contour.",
+        icon: "Eye",
+      },
+      {
+        slug: "mommy-makeover",
+        title: "Mommy Makeover",
+        shortDesc: "Combined tummy tuck, breast enhancement, and liposuction to restore pre-pregnancy body confidence.",
+        icon: "Star",
+      },
+      {
+        slug: "facial-bone-fractures",
+        title: "Facial Bone Fracture Fixation",
+        shortDesc: "Rigid internal fixation with titanium mini-plates for facial trauma.",
+        icon: "ShieldPlus",
+      },
+      {
+        slug: "cosmetic-facial-suturing",
+        title: "Cosmetic Facial Suturing",
+        shortDesc: "Microsurgical layered repair of facial cuts and accidental lacerations.",
+        icon: "Scissors",
+      },
+      {
+        slug: "ear-lobule-deformity-correction",
+        title: "Torn Ear Lobule & Deformity Correction",
+        shortDesc: "Repair of split or elongated earlobes and aesthetic otoplasty.",
+        icon: "Activity",
+      },
+      {
+        slug: "facial-enhancements-buccal-dimple",
+        title: "Dimple Creation, Buccal Fat & Tongue Tie",
+        shortDesc: "Buccal fat pad excision, dimple creation, and tongue tie frenuloplasty.",
+        icon: "Smile",
+      },
+      {
+        slug: "arm-and-thigh-lift",
+        title: "Arm & Thigh Lift",
+        shortDesc: "Skin tightening and contouring for arms and thighs.",
+        icon: "Flame",
+      },
+      {
+        slug: "genital-rejuvenation",
+        title: "Genital Rejuvenation (Labiaplasty)",
+        shortDesc: "Intimate aesthetic surgery including labiaplasty and hymenoplasty.",
+        icon: "Sparkles",
+      },
+    ],
+    reconstructive: [
+      {
+        slug: "microvascular-surgery",
+        title: "Microvascular Free Flap Surgery",
+        shortDesc: "Complex tissue transfer surgery for reconstruction of cancer defects, trauma injuries, and congenital deformities.",
+        icon: "Microscope",
+      },
+      {
+        slug: "cancer-reconstruction",
+        title: "Oncoplastic & Free Flap Reconstruction",
+        shortDesc: "Post-cancer defect reconstruction using advanced free tissue transfer.",
+        icon: "HeartPulse",
+      },
+      {
+        slug: "burns-reconstruction",
+        title: "Burns Care & Reconstruction",
+        shortDesc: "Acute burn management, skin grafting, scar contracture release, and functional joint restoration.",
+        icon: "Flame",
+      },
+      {
+        slug: "hand-surgery",
+        title: "Hand Surgery & Carpal Tunnel Release",
+        shortDesc: "Carpal tunnel release, tendon repairs, and hand trauma reconstruction.",
+        icon: "Hand",
+      },
+      {
+        slug: "nail-injuries-fingertip-repair",
+        title: "Nail Bed Injuries & Fingertip Repair",
+        shortDesc: "Delicate nail bed microsurgery and fingertip reconstruction.",
+        icon: "Scissors",
+      },
+      {
+        slug: "scar-revision",
+        title: "Scar Revision & Keloids",
+        shortDesc: "Treatment of hypertrophic scars, keloids, and scar realignment.",
+        icon: "Scissors",
+      },
+      {
+        slug: "trauma-reconstruction",
+        title: "Trauma & Maxillofacial Surgery",
+        shortDesc: "Facial bone fracture repair, complex limb salvage, and soft tissue defect reconstruction.",
+        icon: "ShieldPlus",
+      },
+      {
+        slug: "chronic-wound-management",
+        title: "Chronic Wound Care & Diabetic Foot",
+        shortDesc: "Diabetic foot salvage, bedsores flap cover, and pilonidal sinus treatment.",
+        icon: "Activity",
+      },
+      {
+        slug: "av-fistula-creation",
+        title: "AV Fistula Creation for Dialysis",
+        shortDesc: "Vascular access surgery for hemodialysis patients.",
+        icon: "Zap",
+      },
+      {
+        slug: "peripheral-nerve-surgery",
+        title: "Peripheral Nerve Surgery & Biopsies",
+        shortDesc: "Microsurgical nerve repairs, neurolysis, and diagnostic biopsies.",
+        icon: "Microscope",
+      },
+      {
+        slug: "excision-cysts-lipomas-ganglion",
+        title: "Excision of Cysts, Lipomas & Ganglions",
+        shortDesc: "Outpatient removal of sebaceous cysts, lipomas, ganglions, and skin tags.",
+        icon: "Minimize2",
+      },
+      {
+        slug: "pediatric-plastic-surgery",
+        title: "Pediatric Plastic Surgery (Cleft Lip & Palate)",
+        shortDesc: "Congenital cleft lip and palate repair, and pediatric circumcision.",
+        icon: "Heart",
+      },
+    ],
+    nonSurgical: [
+      {
+        slug: "botox",
+        title: "Botox & Anti-Wrinkle Treatment",
+        shortDesc: "Botulinum toxin injections for dynamic wrinkles, jaw slimming, and hyperhidrosis management.",
+        icon: "Droplets",
+      },
+      {
+        slug: "anti-aging-botox-fillers",
+        title: "Treatment of Ageing Face (Botox & Fillers)",
+        shortDesc: "Comprehensive facial line softening and dermal volume restoration.",
+        icon: "Droplets",
+      },
+      {
+        slug: "dermal-fillers",
+        title: "Dermal Fillers",
+        shortDesc: "Hyaluronic acid fillers for lips, tear troughs, nasolabial folds, chin, and jawline contouring.",
+        icon: "Pipette",
+      },
+      {
+        slug: "prp-therapy",
+        title: "PRP / GFC Therapy",
+        shortDesc: "Platelet-rich plasma therapy for facial rejuvenation, skin glow enhancement, and hair restoration.",
+        icon: "Zap",
+      },
+    ],
+  },
+
+  featuredProcedures: [
+    {
+      title: "Gynecomastia Surgery",
+      subtitle: "Male Chest Sculpting",
+      description: "Precision gland excision combined with VASER liposuction for a naturally sculpted, masculine chest contour. Dr. Gujarathi's scarless approach minimizes visible marks while maximizing definition.",
+      stat: "Grade I–IV",
+      statLabel: "All Grades Treated",
+    },
+    {
+      title: "Rhinoplasty",
+      subtitle: "Nose Reshaping",
+      description: "Expert open and closed rhinoplasty techniques tailored to Indian facial anatomy. From hump reduction to tip refinement, every procedure is customized for a harmonious, natural result.",
+      stat: "Open & Closed",
+      statLabel: "Techniques Offered",
+    },
+    {
+      title: "Microvascular Reconstruction",
+      subtitle: "Precision Tissue Transfer",
+      description: "Over 500 successful microvascular free flap surgeries for cancer reconstruction, trauma repair, and congenital defect correction. Tata Memorial Hospital-trained expertise in ALT, DIEP, and fibula flaps.",
+      stat: "500+",
+      statLabel: "Successful Procedures",
+    },
+    {
+      title: "Body Contouring",
+      subtitle: "Sculpt & Define",
+      description: "Comprehensive body reshaping through high-definition liposuction, abdominoplasty, and post-weight loss body lifts. Advanced VASER technology for precision fat removal and athletic body sculpting.",
+      stat: "360°",
+      statLabel: "HD Liposuction",
+    },
+    {
+      title: "Burns & Scar Care",
+      subtitle: "Restore & Rebuild",
+      description: "Complete burns management from acute care to long-term rehabilitation. Expert scar contracture release, skin grafting, and functional reconstruction to restore mobility and appearance.",
+      stat: "Complete",
+      statLabel: "Burn Care Pathway",
+    },
+  ],
+
+  processSteps: [
+    {
+      step: 1,
+      title: "Initial Consultation",
+      description: "A thorough discussion of your goals, medical history, and expectations. Dr. Gujarathi takes time to understand your unique needs and provides honest, realistic guidance.",
+    },
+    {
+      step: 2,
+      title: "Personalized Assessment",
+      description: "Detailed physical examination and diagnostic workup. Using advanced imaging and measurements, a customized treatment plan is designed specifically for your anatomy.",
+    },
+    {
+      step: 3,
+      title: "Treatment Plan",
+      description: "A comprehensive surgical plan outlining the procedure, techniques, expected outcomes, recovery timeline, and costs. Every question is answered before you proceed.",
+    },
+    {
+      step: 4,
+      title: "The Procedure",
+      description: "Surgery performed with meticulous precision at a NABH-accredited hospital. The latest techniques and equipment ensure safety, minimal scarring, and optimal results.",
+    },
+    {
+      step: 5,
+      title: "Recovery & Follow-up",
+      description: "Dedicated post-operative care with regular follow-ups to monitor healing. Detailed recovery instructions and round-the-clock support ensure a smooth, comfortable recovery.",
+    },
+  ],
+
+  testimonials: [
+    {
+      name: "Rajesh M.",
+      procedure: "Gynecomastia Surgery",
+      rating: 5,
+      text: "Dr. Gujarathi completely transformed my confidence. The gynecomastia surgery was seamless, and the results are incredible. He explained everything clearly and made me feel comfortable throughout the process.",
+    },
+    {
+      name: "Priya S.",
+      procedure: "Rhinoplasty",
+      rating: 5,
+      text: "I had been self-conscious about my nose for years. Dr. Gujarathi's rhinoplasty gave me a natural-looking result that perfectly suits my face. His attention to detail is remarkable.",
+    },
+    {
+      name: "Amit K.",
+      procedure: "Burns Reconstruction",
+      rating: 5,
+      text: "After a severe burn injury, Dr. Gujarathi performed multiple reconstructive surgeries that restored mobility in my hand. His expertise in microsurgery is truly world-class.",
+    },
+    {
+      name: "Sneha D.",
+      procedure: "Liposuction",
+      rating: 5,
+      text: "The body contouring results exceeded my expectations. Dr. Gujarathi's approach was very professional and his team was supportive from consultation through recovery. Highly recommend!",
+    },
+    {
+      name: "Vikram P.",
+      procedure: "Scar Revision",
+      rating: 5,
+      text: "Had an old accident scar that always bothered me. Dr. Gujarathi's scar revision surgery made a dramatic improvement. The scar is now barely visible. Excellent surgeon!",
+    },
+    {
+      name: "Neha R.",
+      procedure: "Breast Reduction",
+      rating: 5,
+      text: "Dr. Gujarathi handled my case with utmost sensitivity and professionalism. The surgery relieved years of back pain and the aesthetic result is beautiful. Forever grateful.",
+    },
+  ],
+
+  faqs: [
+    {
+      question: "What qualifications does Dr. Chintan Gujarathi have?",
+      answer: "Dr. Gujarathi holds MBBS, MS (General Surgery), MCh (Plastic & Reconstructive Surgery), and DrNB (Plastic Surgery) degrees. He also completed an advanced Oncoplastic Fellowship at Tata Memorial Hospital, Mumbai — one of Asia's premier cancer centers.",
+    },
+    {
+      question: "What is the difference between cosmetic and reconstructive surgery?",
+      answer: "Cosmetic surgery focuses on enhancing appearance and aesthetics (e.g., rhinoplasty, liposuction, facelifts), while reconstructive surgery aims to restore function and normal appearance after trauma, burns, cancer removal, or congenital abnormalities. Dr. Gujarathi is expertly trained in both disciplines.",
+    },
+    {
+      question: "How do I know if I am a good candidate for plastic surgery?",
+      answer: "Good candidates are generally in good health, have realistic expectations, and are seeking specific improvements. During your consultation, Dr. Gujarathi will conduct a thorough assessment of your health, discuss your goals, and help determine the most appropriate approach for you.",
+    },
+    {
+      question: "What is the recovery time for gynecomastia surgery?",
+      answer: "Most patients can return to desk work within 3-5 days and resume light exercise after 2-3 weeks. Full recovery, including resuming strenuous physical activity, typically takes 4-6 weeks. A compression garment is worn for 4-6 weeks to optimize results.",
+    },
+    {
+      question: "Does rhinoplasty leave visible scars?",
+      answer: "In closed rhinoplasty, all incisions are made inside the nose, leaving no visible scars. In open rhinoplasty, a small incision is made on the columella (the tissue between nostrils), which heals into a nearly invisible fine line within a few months.",
+    },
+    {
+      question: "What hospitals does Dr. Gujarathi operate at?",
+      answer: "Dr. Gujarathi practices at Manipal Hospital Kharadi (primary location), Ruby Hall Clinic on Sassoon Road, Ruby Hall Clinic Wanowrie, and Symbiosis University Hospital in Lavale. All are premier multi-specialty hospitals with advanced operation theatres and ICU facilities.",
+    },
+    {
+      question: "Is plastic surgery safe?",
+      answer: "When performed by a qualified, board-certified plastic surgeon at an accredited hospital, plastic surgery is very safe. Dr. Gujarathi operates at NABH-accredited facilities with experienced anesthesiologists and follows strict safety protocols to minimize risks.",
+    },
+    {
+      question: "How much does a consultation cost?",
+      answer: "Consultation fees typically range from ₹1,000 to ₹1,200 depending on the hospital location. During the consultation, Dr. Gujarathi provides a comprehensive assessment, discusses treatment options, and provides transparent cost estimates for any recommended procedures.",
+    },
+  ],
+
+  whyChoose: [
+    {
+      title: "Super-Specialty Trained",
+      description: "MCh (Plastic Surgery) and DrNB — the highest surgical qualifications in the field.",
+      icon: "GraduationCap",
+    },
+    {
+      title: "Tata Memorial Trained",
+      description: "Advanced oncoplastic fellowship at India's premier cancer hospital.",
+      icon: "Award",
+    },
+    {
+      title: "500+ Microsurgeries",
+      description: "Extensive experience in complex microvascular free flap reconstruction.",
+      icon: "Microscope",
+    },
+    {
+      title: "Multi-Hospital Presence",
+      description: "Operating at 4 leading Pune hospitals for accessibility and convenience.",
+      icon: "Building2",
+    },
+    {
+      title: "Comprehensive Care",
+      description: "From aesthetic enhancements to complex trauma reconstruction — all under one expert.",
+      icon: "HeartHandshake",
+    },
+    {
+      title: "Patient-First Approach",
+      description: "Transparent counselling, realistic expectations, and dedicated post-operative follow-up.",
+      icon: "UserCheck",
+    },
+  ],
+
+  seo: {
+    title: "Dr. Chintan Gujarathi | Best Plastic, Cosmetic & Reconstructive Surgeon in Pune",
+    description: "Dr. Chintan Gujarathi is a leading Plastic, Cosmetic & Reconstructive Surgeon in Pune. MCh, DrNB certified. Expert in Gynecomastia, Rhinoplasty, Liposuction, Burns Reconstruction & Microvascular Surgery. Consult at Manipal Hospital Kharadi.",
+    keywords: [
+      "best plastic surgeon in pune",
+      "cosmetic surgeon in pune",
+      "plastic surgeon in kharadi pune",
+      "gynecomastia surgery in pune",
+      "rhinoplasty in pune",
+      "liposuction in pune",
+      "reconstructive surgeon pune",
+      "tummy tuck surgery pune",
+      "breast augmentation pune",
+      "facelift surgery pune",
+      "burn specialist doctor pune",
+      "microvascular surgeon pune",
+      "scar revision surgery pune",
+      "hand surgeon pune",
+      "body contouring pune",
+      "cosmetic surgery clinic kharadi",
+      "dr chintan gujarathi",
+      "best plastic surgeon kharadi",
+      "mommy makeover pune",
+      "male breast reduction pune",
+    ],
+  },
 };
 
-export type SiteConfig = typeof siteConfig;
+export type SiteConfig = typeof SITE_CONFIG;
