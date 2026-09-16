@@ -21,21 +21,21 @@ interface BeforeAfterCase {
 
 const CASES: BeforeAfterCase[] = [
   {
-    id: 'hair-transplant',
-    category: 'Hair Restoration',
-    categoryBadge: 'HAIR RESTORATION',
-    title: 'Hairline Redesign & Density Restoration',
-    subtitle: 'Bio-FUE Micro-Follicular Unit Extraction',
-    timeline: '8 Months Post-Op',
-    serviceSlug: 'hair-transplant',
-    beforeImage: '/images/before-after/hair-before.jpg',
-    afterImage: '/images/before-after/hair-after.jpg',
-    beforeAlt: 'Before Hair Transplant Surgery — Temple Recession',
-    afterAlt: 'After Hair Transplant Surgery — Restored Hairline and Density',
+    id: 'ear-lobule-repair',
+    category: 'Earlobe Repair',
+    categoryBadge: 'EARLOBE RECONSTRUCTION',
+    title: 'Split Earlobe Repair & Lobule Recontouring',
+    subtitle: 'In-Office Microsurgical Lobuloplasty',
+    timeline: '6 Weeks Post-Op',
+    serviceSlug: 'torn-earlobe-repair-in-pune',
+    beforeImage: '/images/before-after/earlobe-before.webp',
+    afterImage: '/images/before-after/earlobe-after.webp',
+    beforeAlt: 'Before Earlobe Surgery — Complete Split Ear Piercing Tear',
+    afterAlt: 'After Earlobe Surgery — Restored Smooth Contour and Healed Lobule',
     keyBenefits: [
-      '2,600+ micro-follicular units transplanted with natural angulation',
-      'Reinforced frontal hairline matching facial proportions',
-      'Minimally invasive with no linear scarring and rapid recovery',
+      'Complete split closure eliminating the vertical notch cleft deformity',
+      'Preservation of natural plump lobule curvature and volume',
+      'Painless 20-min day-care procedure allowing safe future re-piercing',
     ],
   },
   {
@@ -45,9 +45,9 @@ const CASES: BeforeAfterCase[] = [
     title: 'Dorsal Hump Reduction & Tip Refinement',
     subtitle: 'Open Structural Rhinoplasty',
     timeline: '6 Months Post-Op',
-    serviceSlug: 'rhinoplasty',
-    beforeImage: '/images/before-after/rhinoplasty-before.jpg',
-    afterImage: '/images/before-after/rhinoplasty-after.jpg',
+    serviceSlug: 'rhinoplasty-in-pune',
+    beforeImage: '/images/before-after/rhinoplasty-before.webp',
+    afterImage: '/images/before-after/rhinoplasty-after.webp',
     beforeAlt: 'Before Rhinoplasty Surgery — Dorsal Hump and Under-projected Tip',
     afterAlt: 'After Rhinoplasty Surgery — Balanced Dorsal Line and Sculpted Tip',
     keyBenefits: [
@@ -102,7 +102,7 @@ export default function BeforeAfterSection() {
         <div className="max-w-2xl">
           <div className="flex items-center gap-2 mb-2">
             <span className="text-[10.5px] font-bold tracking-[0.24em] text-[#9784B4] uppercase">
-              CLINICAL RESULTS
+              CLINICAL RESULTS & CASES — PUNE
             </span>
             <span className="w-2 h-2 rounded-full bg-[#9784B4]" />
           </div>
@@ -110,12 +110,12 @@ export default function BeforeAfterSection() {
             Real Surgical Results. <span className="font-serif italic text-[#9784B4]">Interactive Slider.</span>
           </h2>
           <p className="mt-2 text-xs sm:text-sm text-[#554B64]">
-            Slide the divider to compare clinical before and after outcomes.
+            Slide the divider to compare verified clinical before and after outcomes from our Pune practice.
           </p>
         </div>
 
         {/* Tab Switcher */}
-        <div className="flex flex-wrap items-center gap-2 p-1.5 bg-[#FAF7FC] rounded-full border border-[#EDE6F5] shadow-2xs self-start md:self-auto">
+        <div className="w-full sm:w-auto grid grid-cols-2 sm:flex sm:flex-row items-center gap-1.5 p-1 sm:p-1.5 bg-[#FAF7FC] rounded-full border border-[#EDE6F5] shadow-2xs">
           {CASES.map((item) => {
             const isActive = activeTab === item.id;
             return (
@@ -126,7 +126,7 @@ export default function BeforeAfterSection() {
                   setActiveTab(item.id);
                   setSliderPosition(50);
                 }}
-                className={`px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 cursor-pointer ${
+                className={`w-full sm:w-auto text-center px-3 sm:px-5 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs font-semibold tracking-wider uppercase transition-all duration-300 cursor-pointer whitespace-nowrap ${
                   isActive
                     ? 'bg-[#9784B4] text-white shadow-xs'
                     : 'text-[#554B64] hover:text-[#25202E] hover:bg-white/60'
@@ -186,16 +186,16 @@ export default function BeforeAfterSection() {
               className="absolute top-0 bottom-0 z-20 pointer-events-none"
               style={{ left: `${sliderPosition}%` }}
             >
-              {/* Vertical Line */}
-              <div className="absolute top-0 bottom-0 -left-[1.5px] w-[3px] bg-white shadow-[0_0_12px_rgba(0,0,0,0.5)]" />
+              {/* Clean Vertical Divider Line */}
+              <div className="absolute top-0 bottom-0 -left-[1px] w-[2px] bg-white shadow-[0_0_8px_rgba(0,0,0,0.35)]" />
 
-              {/* Center Circular Grabber Handle */}
-              <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-white shadow-[0_4px_20px_rgba(151,132,180,0.35)] border-2 border-[#9784B4] flex items-center justify-center text-[#25202E] transition-transform duration-150 group-active:scale-110">
-                <div className="flex items-center gap-1 text-[#9784B4]">
-                  <svg className="w-3 h-3 fill-current" viewBox="0 0 24 24">
+              {/* Minimalist Small Circular Grabber Handle */}
+              <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#9784B4] text-white border-2 border-white shadow-[0_2px_12px_rgba(0,0,0,0.25)] flex items-center justify-center transition-transform duration-150 group-active:scale-110">
+                <div className="flex items-center gap-0.5 text-white">
+                  <svg className="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24">
                     <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
                   </svg>
-                  <svg className="w-3 h-3 fill-current" viewBox="0 0 24 24">
+                  <svg className="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24">
                     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
                   </svg>
                 </div>
@@ -254,17 +254,17 @@ export default function BeforeAfterSection() {
           </div>
 
           {/* Action Buttons */}
-          <div className="pt-2 flex flex-wrap gap-3">
+          <div className="pt-1.5 flex flex-wrap items-center justify-start gap-2.5 sm:gap-3 w-full">
             <Link
               href={`/services/${activeCase.serviceSlug}`}
-              className="flex-1 min-w-[170px] text-center py-3.5 px-6 rounded-full bg-[#9784B4] hover:bg-[#8470A3] text-white text-xs font-bold tracking-wider uppercase transition-all shadow-md hover:-translate-y-0.5 inline-flex items-center justify-center gap-2"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-[#9784B4] hover:bg-[#8470A3] text-white text-[11px] font-semibold tracking-[0.2em] uppercase transition-all duration-300 shadow-[0_10px_25px_-5px_rgba(151,132,180,0.45)] hover:shadow-[0_14px_30px_-5px_rgba(151,132,180,0.6)] hover:-translate-y-0.5 w-auto"
             >
               <span>Read Procedure Guide</span>
               <span>→</span>
             </Link>
             <a
               href="tel:07977429688"
-              className="py-3.5 px-6 rounded-full border border-[#EDE6F5] hover:border-[#9784B4] bg-[#FAF7FC] hover:bg-white text-[#25202E] text-xs font-bold tracking-wider uppercase transition-all shadow-2xs"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 sm:py-3.5 rounded-full border border-[#D5CBE2] bg-white/80 hover:bg-white text-[11px] font-semibold tracking-[0.18em] uppercase text-[#25202E] transition-all hover:border-[#9784B4] shadow-2xs w-auto"
             >
               Consult Surgeon
             </a>

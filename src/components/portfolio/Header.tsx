@@ -43,6 +43,7 @@ export default function Header() {
   const isHomeActive = normalizedPath === '/';
   const isAboutActive = normalizedPath === '/about';
   const isServicesActive = normalizedPath === '/services' || normalizedPath.startsWith('/services/');
+  const isSuccessStoriesActive = normalizedPath === '/success-stories';
   const isContactActive = normalizedPath === '/contact';
 
   const handleDropdownEnter = () => {
@@ -81,10 +82,10 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-1.5 text-xs uppercase tracking-[0.16em]">
+          <nav className="hidden md:flex items-center gap-2 lg:gap-2.5 text-xs uppercase tracking-[0.04em]">
             <Link
               href="/"
-              className={`px-4 py-1.5 rounded-full transition-all duration-200 ${
+              className={`px-3 py-1.5 rounded-full transition-all duration-200 ${
                 isHomeActive
                   ? 'bg-[#9784B4] text-white font-bold shadow-xs'
                   : 'text-[#4A3F55] hover:text-[#9784B4] hover:bg-[#9784B4]/10 font-medium'
@@ -95,7 +96,7 @@ export default function Header() {
 
             <Link
               href="/about"
-              className={`px-4 py-1.5 rounded-full transition-all duration-200 ${
+              className={`px-3 py-1.5 rounded-full transition-all duration-200 ${
                 isAboutActive
                   ? 'bg-[#9784B4] text-white font-bold shadow-xs'
                   : 'text-[#4A3F55] hover:text-[#9784B4] hover:bg-[#9784B4]/10 font-medium'
@@ -110,28 +111,47 @@ export default function Header() {
             >
               <Link
                 href="/services"
-                className={`px-4 py-1.5 rounded-full transition-all duration-200 inline-flex items-center gap-1.5 ${
+                className={`px-3 py-1.5 rounded-full transition-all duration-200 inline-flex items-center gap-1 ${
                   isServicesActive
                     ? 'bg-[#9784B4] text-white font-bold shadow-xs'
                     : 'text-[#4A3F55] hover:text-[#9784B4] hover:bg-[#9784B4]/10 font-medium'
                 }`}
               >
                 <span>Services</span>
-                <span className={`text-[9px] transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180' : ''}`}>
-                  ▼
-                </span>
+                <svg
+                  className={`w-3 h-3 text-current transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180' : ''}`}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
               </Link>
             </div>
 
             <Link
+              href="/success-stories"
+              className={`px-3 py-1.5 rounded-full transition-all duration-200 ${
+                isSuccessStoriesActive
+                  ? 'bg-[#9784B4] text-white font-bold shadow-xs'
+                  : 'text-[#4A3F55] hover:text-[#9784B4] hover:bg-[#9784B4]/10 font-medium'
+              }`}
+            >
+              Success Stories
+            </Link>
+
+            <Link
               href="/contact"
-              className={`px-4 py-1.5 rounded-full transition-all duration-200 ${
+              className={`px-3 py-1.5 rounded-full transition-all duration-200 ${
                 isContactActive
                   ? 'bg-[#9784B4] text-white font-bold shadow-xs'
                   : 'text-[#4A3F55] hover:text-[#9784B4] hover:bg-[#9784B4]/10 font-medium'
               }`}
             >
-              Contact
+              Contact Us
             </Link>
           </nav>
 
@@ -340,6 +360,19 @@ export default function Header() {
 
                 {/* Divider Line */}
                 <div className="border-t border-gray-100 pt-2" />
+
+                {/* Success Stories */}
+                <div>
+                  <Link
+                    href="/success-stories"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`block text-[17px] font-bold transition-colors ${
+                      isSuccessStoriesActive ? 'text-[#9784B4]' : 'text-[#1E1B24] hover:text-[#9784B4]'
+                    }`}
+                  >
+                    Success Stories
+                  </Link>
+                </div>
 
                 {/* Contact Us */}
                 <div>

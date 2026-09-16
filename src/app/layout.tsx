@@ -19,6 +19,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_CONFIG.domain),
   title: SITE_CONFIG.seo.title,
   description: SITE_CONFIG.seo.description,
   keywords: SITE_CONFIG.seo.keywords.join(', '),
@@ -33,11 +34,20 @@ export const metadata: Metadata = {
     description: SITE_CONFIG.seo.description,
     siteName: SITE_CONFIG.name,
     url: SITE_CONFIG.domain,
+    images: [
+      {
+        url: `${SITE_CONFIG.domain}/images/dr-chintan-gujarathi.webp`,
+        width: 1200,
+        height: 630,
+        alt: `${SITE_CONFIG.name} - Senior Consultant Plastic Surgeon Pune`,
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: SITE_CONFIG.seo.title,
     description: SITE_CONFIG.seo.description,
+    images: [`${SITE_CONFIG.domain}/images/dr-chintan-gujarathi.webp`],
   },
 };
 
@@ -46,7 +56,9 @@ function PhysicianSchema() {
     '@context': 'https://schema.org',
     '@type': 'Physician',
     name: SITE_CONFIG.doctor.fullName,
+    image: `${SITE_CONFIG.domain}/images/dr-chintan-gujarathi.webp`,
     description: SITE_CONFIG.seo.description,
+    priceRange: '₹₹₹',
     medicalSpecialty: ['PlasticSurgery', 'CosmeticSurgery'],
     qualification: SITE_CONFIG.doctor.qualifications,
     url: SITE_CONFIG.domain,

@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="220" height="50" viewBox="0 0 220 50" fill="none">
-  <!-- Embedded WebP logo emblem (light blue/violet outline) -->
-  <image href="/images/logo-emblem-1.webp" x="2" y="2" width="46" height="46" />
-
-  <!-- Clinic Brand Text -->
-  <text x="58" y="21" font-family="'Onest', sans-serif" font-size="15" font-weight="800" fill="white" letter-spacing="0.5">DR. POONAM'S</text>
-  <text x="58" y="37" font-family="'Onest', sans-serif" font-size="11" font-weight="700" fill="#D8E4EA" letter-spacing="1">WOMEN'S CLINIC</text>
-</svg>

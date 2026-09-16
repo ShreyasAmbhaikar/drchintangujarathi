@@ -29,7 +29,7 @@ const STEPS = [
   {
     num: '03. PROCEDURE',
     title: 'Precision Surgery',
-    desc: 'Expert execution in sterile hospital suites at Ruby Hall Clinic.',
+    desc: 'Expert execution in sterile suites at Ruby Hall & Manipal Hospital.',
     icon: (
       <svg className="w-5 h-5 text-[#876F9F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
         <path d="m18 3 3 3L8.5 18.5a4 4 0 0 1-2 1.2L3 21l1.3-3.5a4 4 0 0 1 1.2-2L18 3Z" />

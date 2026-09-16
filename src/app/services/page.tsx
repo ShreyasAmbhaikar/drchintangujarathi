@@ -5,9 +5,35 @@ import Link from 'next/link';
 import { SITE_CONFIG } from '@/lib/site-config';
 
 export const metadata = {
-  title: 'All Surgical Procedures | Dr. Chintan Gujarathi — Plastic Surgeon Pune',
+  title: 'Plastic, Cosmetic & Reconstructive Surgeries in Pune | Dr. Chintan Gujarathi',
   description:
-    'Comprehensive directory of cosmetic, reconstructive, and non-surgical procedures by Dr. Chintan Gujarathi at Ruby Hall Clinic and Manipal Hospital Kharadi, Pune.',
+    'Explore 30+ plastic, cosmetic & reconstructive surgeries in Pune by Dr. Chintan Gujarathi (MCh, DrNB) at Ruby Hall & Manipal Kharadi. Call 079774 29688.',
+  alternates: {
+    canonical: `${SITE_CONFIG.domain}/services`,
+  },
+  openGraph: {
+    title: 'Plastic, Cosmetic & Reconstructive Surgeries in Pune | Dr. Chintan Gujarathi',
+    description:
+      'Explore 30+ plastic, cosmetic & reconstructive surgeries in Pune by Dr. Chintan Gujarathi (MCh, DrNB) at Ruby Hall & Manipal Kharadi. Call 079774 29688.',
+    url: `${SITE_CONFIG.domain}/services`,
+    siteName: SITE_CONFIG.name,
+    type: 'website',
+    images: [
+      {
+        url: `${SITE_CONFIG.domain}/images/dr-chintan-gujarathi.webp`,
+        width: 1200,
+        height: 630,
+        alt: 'Surgical Specialties in Pune - Dr. Chintan Gujarathi',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Plastic, Cosmetic & Reconstructive Surgeries in Pune | Dr. Chintan Gujarathi',
+    description:
+      'Explore 30+ plastic, cosmetic & reconstructive surgeries in Pune by Dr. Chintan Gujarathi (MCh, DrNB) at Ruby Hall & Manipal Kharadi. Call 079774 29688.',
+    images: [`${SITE_CONFIG.domain}/images/dr-chintan-gujarathi.webp`],
+  },
 };
 
 const CATEGORY_THEMES = [
@@ -60,41 +86,66 @@ const CATEGORY_THEMES = [
 export default function ServicesIndexPage() {
   const categories = SITE_CONFIG.serviceCategories;
 
+  const servicesJsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'MedicalWebPage',
+        '@id': `${SITE_CONFIG.domain}/services#webpage`,
+        url: `${SITE_CONFIG.domain}/services`,
+        name: 'Plastic, Cosmetic & Reconstructive Surgeries in Pune | Dr. Chintan Gujarathi',
+        description:
+          'Explore 30+ plastic, cosmetic & reconstructive surgeries in Pune by Dr. Chintan Gujarathi (MCh, DrNB) at Ruby Hall & Manipal Kharadi.',
+        performer: {
+          '@type': 'Physician',
+          name: SITE_CONFIG.doctor.fullName,
+          url: SITE_CONFIG.domain,
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: SITE_CONFIG.domain,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Services',
+            item: `${SITE_CONFIG.domain}/services`,
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-[#FBF9F5] text-[#25202E] flex flex-col selection:bg-[#EAE4F2]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}
+      />
       <Header />
 
       <main className="flex-1">
-        {/* Header Hero */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-12">
-          <div className="bg-gradient-to-br from-[#FAF3EC] via-[#F4ECF7] to-[#EAE0F3] rounded-[36px] border border-[#DFCEEE] p-8 sm:p-14 card-shadow text-center max-w-4xl mx-auto">
+        {/* Header Hero (Clean Editorial Directory Header) */}
+        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-8">
+          <div className="bg-gradient-to-br from-[#FAF3EC] via-[#F4ECF7] to-[#EAE0F3] rounded-[36px] border border-[#DFCEEE] p-8 sm:p-12 card-shadow text-center max-w-4xl mx-auto">
             <div className="flex items-center justify-center gap-2 mb-3">
               <span className="text-xs font-semibold tracking-[0.24em] text-[#9784B4] uppercase">
-                COMPREHENSIVE SURGICAL DIRECTORY
+                COMPREHENSIVE CLINICAL DIRECTORY — PUNE
               </span>
             </div>
 
-            <h1 className="mt-2 text-4xl sm:text-6xl font-normal text-[#25202E]">
+            <h1 className="mt-2 text-4xl sm:text-5xl lg:text-6xl font-normal text-[#25202E]">
               Surgical <span className="font-serif italic text-[#9784B4]">Specialties</span>
             </h1>
             <p className="mt-4 text-xs sm:text-base text-[#554B64] leading-relaxed max-w-2xl mx-auto">
               From refined aesthetic facial transformations to microvascular reconstructions and specialized hand repairs, explore the complete scope of surgical excellence offered by Dr. Chintan Gujarathi.
             </p>
-
-            {/* Jump Navigation Pills */}
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              {categories.map((cat, idx) => (
-                <a
-                  key={cat.id}
-                  href={`#${cat.id}`}
-                  className="px-4 py-2 rounded-full bg-white text-xs font-semibold tracking-wider text-[#25202E] border border-[#EDE6F5] hover:border-[#9784B4] hover:bg-[#F8F4FA] transition-all shadow-2xs"
-                >
-                  <span className="text-[#9784B4] font-bold mr-1.5">0{idx + 1}.</span>
-                  <span>{cat.shortTitle}</span>
-                  <span className="ml-1 text-[#6D6377] text-[10px]">({cat.procedures.length})</span>
-                </a>
-              ))}
-            </div>
           </div>
         </section>
 
@@ -130,17 +181,17 @@ export default function ServicesIndexPage() {
 
                 {/* Procedures Cards Grid with Dynamic Two-Tone Themes */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-                  {cat.procedures.map((proc, procIdx) => (
+                  {cat.procedures.map((proc) => (
                     <Link
                       key={proc.slug}
                       href={`/services/${proc.slug}`}
                       className={`${theme.cardBg} rounded-[24px] border ${theme.borderColor} p-5 sm:p-6 shadow-2xs ${theme.hoverShadow} transition-all duration-300 group flex flex-col justify-between hover:-translate-y-1`}
                     >
                       <div>
-                        {/* Procedure Sequence Indicator & Star */}
+                        {/* Clinical Specialty Tag & Star */}
                         <div className="flex items-center justify-between gap-2 mb-3">
                           <span className={`text-[9.5px] font-bold tracking-wider uppercase px-2.5 py-0.5 rounded-full border ${theme.numberPill}`}>
-                            Procedure 0{procIdx + 1}
+                            {cat.badge}
                           </span>
                           <span className={`text-xs ${theme.starColor}`}>✦</span>
                         </div>
@@ -164,40 +215,6 @@ export default function ServicesIndexPage() {
             );
           })}
         </div>
-
-        {/* Bottom Consultation Banner */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-          <div className="rounded-[32px] bg-[#25202E] text-white p-8 sm:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
-            <div className="max-w-xl">
-              <span className="text-[11px] font-semibold tracking-[0.2em] text-[#E8A88E] uppercase block mb-2">
-                SUPER SPECIALTY SURGICAL CARE
-              </span>
-              <h3 className="font-serif text-2xl sm:text-3xl font-normal text-white">
-                Require a specialized surgical assessment?
-              </h3>
-              <p className="text-xs sm:text-sm text-white/80 mt-2 leading-relaxed">
-                Consult with Dr. Chintan Gujarathi at Ruby Hall Clinic (Sassoon Road) or Manipal Hospital (Kharadi) for personalized diagnosis and reconstructive planning.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
-              <a
-                href="tel:07977429688"
-                className="px-6 py-3 rounded-full bg-white text-[#25202E] hover:bg-[#FAF6F0] text-xs font-semibold tracking-wider uppercase transition-all shadow-md hover:-translate-y-0.5"
-              >
-                Call: 079774 29688
-              </a>
-              <a
-                href="https://wa.me/917977429688?text=Hello%20Dr.%20Chintan%20Gujarathi,%20I%20would%20like%20to%20inquire%20about%20a%20surgical%20procedure."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 rounded-full bg-[#25D366] text-white hover:bg-[#20bd5a] text-xs font-semibold tracking-wider uppercase transition-all shadow-md hover:-translate-y-0.5"
-              >
-                WhatsApp Inquiry
-              </a>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />

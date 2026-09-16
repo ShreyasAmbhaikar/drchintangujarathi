@@ -24,7 +24,8 @@ export default function HomePage() {
           <div className="absolute bottom-[10%] -left-16 w-[600px] h-[600px] rounded-full bg-gradient-to-tr from-[#F8CCB5]/60 via-[#D6B5F5]/50 to-transparent blur-[85px] animate-float-3" />
         </div>
 
-        <div className="relative z-10 flex flex-col">
+        {/* Homepage Sections with spacious mobile breathing room and untouched desktop layout */}
+        <div className="relative z-10 flex flex-col space-y-10 sm:space-y-0 pb-12 sm:pb-16">
           <HeroSection />
           <StatsStrip />
           <StackedProceduresSection />

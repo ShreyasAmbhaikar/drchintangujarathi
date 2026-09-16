@@ -117,7 +117,7 @@ export default function ProcedureInteractiveView({ data }: Props) {
     else if (app.id === 'free-perforator-transfer') filterLabel = 'Free Perforator Flap';
     else if (app.id === 'free-fibula-osteocutaneous') filterLabel = 'Free Fibula Mandible';
     else if (app.id === 'lymphaticovenular-anastomosis-lva') filterLabel = 'LVA for Lymphedema';
-    else if (app.id === 'hair-regeneration-gfc') filterLabel = 'PRP & GFC Hair';
+    else if (app.id === 'hair-regeneration-gfc' || app.id === 'skin-rejuvenation-gfc') filterLabel = 'PRP & GFC Skin Glow';
     else if (app.id === 'facial-rejuvenation-prp') filterLabel = 'PRP Vampire Facial';
     else if (app.id === 'scar-wound-healing-prp') filterLabel = 'PRP Scar Biotherapy';
     else {
@@ -348,30 +348,36 @@ export default function ProcedureInteractiveView({ data }: Props) {
         })()}
       </section>
 
-      {/* ─── SECTION 3: RECOVERY & POST-OPERATIVE CARE GUIDE (COLORFUL THEMED CARDS) ─── */}
-      <section className="space-y-10">
-        {/* Single Centered Heading with Two-Color Brand Styling */}
+      {/* ─── SECTION 3: RECOVERY & HEALING TIMELINE (COLORFUL THEMED CARDS) ─── */}
+      <section className="space-y-8">
+        {/* Centered Heading with Two-Color Brand Styling */}
         <div className="text-center max-w-3xl mx-auto space-y-2.5">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#9784B4]/15 border border-[#9784B4]/25 text-[10.5px] font-bold tracking-[0.2em] text-[#9784B4] uppercase">
+            <span>✦</span>
+            <span>CLINICAL ROADMAP • RECOVERY PHASES</span>
+            <span>✦</span>
+          </div>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#221E2A] font-normal leading-tight">
             Your Healing Journey &{' '}
             <span className="font-serif italic font-normal text-[#9683B5] inline-flex items-center">
-              Care Guide
+              Recovery Timeline
               <span className="inline-block text-[#9683B5]/70 text-xs ml-1.5 -mt-3">✦</span>
             </span>
           </h2>
           <p className="text-sm sm:text-base text-[#675F72] leading-relaxed">
-            A straightforward clinical guide to what to expect and how to care for your results.
+            A straightforward clinical timeline of what to expect and how your results mature week by week.
           </p>
         </div>
 
-        {/* 4 Colorful Phase Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        {/* 4 Colorful Phase Cards with Perfectly Aligned Baseline */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch">
           {RECOVERY_PHASES.map((rec, idx) => (
             <div
               key={idx}
-              className={`rounded-[26px] bg-gradient-to-br ${rec.gradient} border ${rec.border} p-6 shadow-xs hover:shadow-md transition-all flex flex-col justify-between space-y-4`}
+              className={`rounded-[26px] bg-gradient-to-br ${rec.gradient} border ${rec.border} p-6 shadow-xs hover:shadow-md transition-all flex flex-col justify-between h-full`}
             >
-              <div className="space-y-2.5">
+              {/* Top Phase Header, Title & Description */}
+              <div className="flex-1 flex flex-col space-y-2.5">
                 <div className="flex items-center justify-between pb-2 border-b border-black/5">
                   <span className="text-xs font-bold tracking-wider text-[#25202E] uppercase">
                     {rec.period}
@@ -381,16 +387,17 @@ export default function ProcedureInteractiveView({ data }: Props) {
                   </span>
                 </div>
 
-                <h3 className="font-serif text-lg text-[#25202E] font-medium leading-snug">
+                <h3 className="font-serif text-lg text-[#25202E] font-medium leading-snug min-h-[48px] sm:min-h-[52px] flex items-start">
                   {rec.title}
                 </h3>
-                <p className="text-xs text-[#554B64] leading-relaxed">
+                <p className="text-xs text-[#554B64] leading-relaxed flex-1">
                   {rec.desc}
                 </p>
               </div>
 
-              <div className="p-3 rounded-xl bg-white/80 border border-white shadow-2xs space-y-0.5">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-[#25202E] block">
+              {/* Surgeon Guidance White Box: Fixed Min-Height and Pinned to Bottom for 100% Alignment */}
+              <div className="mt-4 p-3.5 rounded-xl bg-white/90 border border-white/80 shadow-2xs flex flex-col justify-start min-h-[96px] sm:min-h-[105px]">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#25202E] block mb-1">
                   💡 Surgeon Guidance:
                 </span>
                 <p className="text-[11px] text-[#554B64] leading-relaxed">
@@ -400,47 +407,78 @@ export default function ProcedureInteractiveView({ data }: Props) {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* ─── SECTION 4: RECOMMENDED BEST PRACTICES & PRECAUTIONS (SEPARATE DEDICATED SECTION) ─── */}
+      <section className="space-y-8">
+        <div className="text-center max-w-3xl mx-auto space-y-2.5">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#E8A88E]/20 border border-[#E8A88E]/35 text-[10.5px] font-bold tracking-[0.2em] text-[#B8684D] uppercase">
+            <span>✦</span>
+            <span>POST-OPERATIVE CARE • PATIENT SAFEGUARDS</span>
+            <span>✦</span>
+          </div>
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#221E2A] font-normal leading-tight">
+            Recommended Best Practices &{' '}
+            <span className="font-serif italic font-normal text-[#9683B5] inline-flex items-center">
+              Precautions
+              <span className="inline-block text-[#9683B5]/70 text-xs ml-1.5 -mt-3">✦</span>
+            </span>
+          </h2>
+          <p className="text-sm sm:text-base text-[#675F72] leading-relaxed">
+            Essential surgical safeguards and post-operative instructions recommended by Dr. Chintan Gujarathi to protect your incisions and ensure smooth recovery.
+          </p>
+        </div>
 
         {/* Colorful Do's & Don'ts Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
           {/* Do's Card: Soft Lilac */}
-          <div className="bg-gradient-to-br from-[#F8F2FC] to-[#F1E4F8] border border-[#DEC9ED] rounded-[24px] p-6 sm:p-8 space-y-4 shadow-xs">
-            <div className="flex items-center gap-3 pb-3 border-b border-[#DFCDEE]">
-              <span className="w-7 h-7 rounded-full bg-[#9784B4] text-white flex items-center justify-center text-xs font-bold shadow-2xs">
-                ✓
-              </span>
-              <h3 className="font-serif text-lg sm:text-xl text-[#25202E] font-medium">
-                Recommended Best Practices (Do&apos;s)
-              </h3>
+          <div className="bg-gradient-to-br from-[#F8F2FC] to-[#F1E4F8] border border-[#DEC9ED] rounded-[26px] p-6 sm:p-8 space-y-4 shadow-xs flex flex-col justify-between">
+            <div className="space-y-4">
+              <div className="flex items-center gap-3 pb-3 border-b border-[#DFCDEE]">
+                <span className="w-7 h-7 rounded-full bg-[#9784B4] text-white flex items-center justify-center text-xs font-bold shadow-2xs">
+                  ✓
+                </span>
+                <h3 className="font-serif text-lg sm:text-xl text-[#25202E] font-medium">
+                  Recommended Best Practices (Do&apos;s)
+                </h3>
+              </div>
+              <ul className="space-y-2.5 text-xs sm:text-sm text-[#4A4056]">
+                {dos.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-2.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#9784B4] shrink-0 mt-2" />
+                    <span className="leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul className="space-y-2.5 text-xs sm:text-sm text-[#4A4056]">
-              {dos.map((item, idx) => (
-                <li key={idx} className="flex items-start gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#9784B4] shrink-0 mt-2" />
-                  <span className="leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="pt-3 border-t border-[#DFCDEE]/60 text-[11px] text-[#7A6E89] font-medium">
+              Verified clinical protocols • Dr. Chintan Gujarathi
+            </div>
           </div>
 
           {/* Don'ts Card: Soft Peach */}
-          <div className="bg-gradient-to-br from-[#FFF6F2] to-[#FCEADE] border border-[#F8D0BD] rounded-[24px] p-6 sm:p-8 space-y-4 shadow-xs">
-            <div className="flex items-center gap-3 pb-3 border-b border-[#F7DACB]">
-              <span className="w-7 h-7 rounded-full bg-[#B8684D] text-white flex items-center justify-center text-xs font-bold shadow-2xs">
-                ✕
-              </span>
-              <h3 className="font-serif text-lg sm:text-xl text-[#25202E] font-medium">
-                Precautions & Safeguards (Don&apos;ts)
-              </h3>
+          <div className="bg-gradient-to-br from-[#FFF6F2] to-[#FCEADE] border border-[#F8D0BD] rounded-[26px] p-6 sm:p-8 space-y-4 shadow-xs flex flex-col justify-between">
+            <div className="space-y-4">
+              <div className="flex items-center gap-3 pb-3 border-b border-[#F7DACB]">
+                <span className="w-7 h-7 rounded-full bg-[#B8684D] text-white flex items-center justify-center text-xs font-bold shadow-2xs">
+                  ✕
+                </span>
+                <h3 className="font-serif text-lg sm:text-xl text-[#25202E] font-medium">
+                  Precautions & Safeguards (Don&apos;ts)
+                </h3>
+              </div>
+              <ul className="space-y-2.5 text-xs sm:text-sm text-[#4A4056]">
+                {donts.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-2.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#B8684D] shrink-0 mt-2" />
+                    <span className="leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul className="space-y-2.5 text-xs sm:text-sm text-[#4A4056]">
-              {donts.map((item, idx) => (
-                <li key={idx} className="flex items-start gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#B8684D] shrink-0 mt-2" />
-                  <span className="leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="pt-3 border-t border-[#F7DACB]/60 text-[11px] text-[#7A6E89] font-medium">
+              Important precautions to safeguard tissue microcirculation
+            </div>
           </div>
         </div>
       </section>

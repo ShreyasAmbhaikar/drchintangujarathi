@@ -9,6 +9,7 @@ const CREDENTIAL_CARDS = [
     cardBg: 'bg-gradient-to-br from-[#FAF6FE] via-[#F4EBF9] to-[#ECE0F5]',
     borderColor: 'border border-[#DECBEB] hover:border-[#9784B4]',
     hoverShadow: 'hover:shadow-[0_12px_28px_-6px_rgba(151,132,180,0.25)]',
+    orderClass: 'order-1 sm:order-1',
     title: 'MCh & DrNB (Plastic Surgery)',
     subtitle: 'MBBS, MS (General Surgery)',
     subtitleColor: 'text-[#644983]',
@@ -27,6 +28,7 @@ const CREDENTIAL_CARDS = [
     cardBg: 'bg-gradient-to-br from-[#FFF8F5] via-[#FCF0E8] to-[#F5E2D5]',
     borderColor: 'border border-[#EACCC0] hover:border-[#B8684D]',
     hoverShadow: 'hover:shadow-[0_12px_28px_-6px_rgba(184,104,77,0.22)]',
+    orderClass: 'order-2 sm:order-2',
     title: 'Tata Memorial Hospital, Mumbai',
     subtitle: 'Observership in Oncoreconstruction',
     subtitleColor: 'text-[#B8684D]',
@@ -41,29 +43,12 @@ const CREDENTIAL_CARDS = [
     ),
   },
   {
-    badge: 'TRAUMA & MICROSURGERY',
-    badgeClass: 'bg-[#E8A88E]/25 text-[#98462E] border border-[#E8A88E]/40 font-bold',
-    cardBg: 'bg-gradient-to-br from-[#FFF8F5] via-[#FCF0E8] to-[#F5E2D5]',
-    borderColor: 'border border-[#EACCC0] hover:border-[#B8684D]',
-    hoverShadow: 'hover:shadow-[0_12px_28px_-6px_rgba(184,104,77,0.22)]',
-    title: 'Ganga Hospital, Coimbatore',
-    subtitle: 'Observership in Trauma & Hand Surgery',
-    subtitleColor: 'text-[#B8684D]',
-    desc: 'Advanced observership at India’s globally renowned institute for acute limb trauma, complex hand reconstruction, and microvascular replantation.',
-    iconBoxBg: 'bg-white/90 border border-[#EACCC0]',
-    iconSvg: (
-      <svg className="w-4 h-4 text-[#B8684D]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <path d="m18 3 3 3-11.5 11.5a4 4 0 0 1-2 1.2L3 21l2.3-4.5a4 4 0 0 1 1.2-2L18 3Z" />
-        <path d="m14 7 3 3" />
-      </svg>
-    ),
-  },
-  {
     badge: 'HOSPITAL APPOINTMENTS',
     badgeClass: 'bg-[#9784B4]/20 text-[#5F457E] border border-[#9784B4]/35 font-bold',
     cardBg: 'bg-gradient-to-br from-[#FAF6FE] via-[#F4EBF9] to-[#EAE0F5]',
     borderColor: 'border border-[#DECBEB] hover:border-[#9784B4]',
     hoverShadow: 'hover:shadow-[0_12px_28px_-6px_rgba(151,132,180,0.25)]',
+    orderClass: 'order-3 sm:order-4',
     title: 'Ruby Hall & Manipal Hospital',
     subtitle: 'Senior Consultant Plastic Surgeon',
     subtitleColor: 'text-[#644983]',
@@ -77,6 +62,25 @@ const CREDENTIAL_CARDS = [
         <path d="M9 13h2" />
         <path d="M13 9h2" />
         <path d="M13 13h2" />
+      </svg>
+    ),
+  },
+  {
+    badge: 'TRAUMA & MICROSURGERY',
+    badgeClass: 'bg-[#E8A88E]/25 text-[#98462E] border border-[#E8A88E]/40 font-bold',
+    cardBg: 'bg-gradient-to-br from-[#FFF8F5] via-[#FCF0E8] to-[#F5E2D5]',
+    borderColor: 'border border-[#EACCC0] hover:border-[#B8684D]',
+    hoverShadow: 'hover:shadow-[0_12px_28px_-6px_rgba(184,104,77,0.22)]',
+    orderClass: 'order-4 sm:order-3',
+    title: 'Ganga Hospital, Coimbatore',
+    subtitle: 'Observership in Trauma & Hand Surgery',
+    subtitleColor: 'text-[#B8684D]',
+    desc: 'Advanced observership at India’s globally renowned institute for acute limb trauma, complex hand reconstruction, and microvascular replantation.',
+    iconBoxBg: 'bg-white/90 border border-[#EACCC0]',
+    iconSvg: (
+      <svg className="w-4 h-4 text-[#B8684D]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <path d="m18 3 3 3-11.5 11.5a4 4 0 0 1-2 1.2L3 21l2.3-4.5a4 4 0 0 1 1.2-2L18 3Z" />
+        <path d="m14 7 3 3" />
       </svg>
     ),
   },
@@ -124,7 +128,7 @@ export default function CredentialsSpotlight() {
             
             {/* Background Doctor Portrait Image */}
             <Image
-              src="/images/doctor-portrait.jpg"
+              src="/images/doctor-portrait.webp"
               alt="Dr. Chintan S. Gujarathi — Plastic & Reconstructive Surgeon Pune"
               fill
               className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
@@ -164,7 +168,7 @@ export default function CredentialsSpotlight() {
             {CREDENTIAL_CARDS.map((item, idx) => (
               <div
                 key={idx}
-                className={`${item.cardBg} rounded-[24px] ${item.borderColor} p-5 sm:p-6 flex flex-col justify-between shadow-[0_4px_18px_-4px_rgba(37,32,46,0.06)] ${item.hoverShadow} transition-all duration-300 hover:-translate-y-1`}
+                className={`${item.cardBg} rounded-[24px] ${item.borderColor} p-5 sm:p-6 flex flex-col justify-between shadow-[0_4px_18px_-4px_rgba(37,32,46,0.06)] ${item.hoverShadow} ${item.orderClass} transition-all duration-300 hover:-translate-y-1`}
               >
                 <div>
                   {/* Card Header with Themed Badge & Minimalist Icon */}

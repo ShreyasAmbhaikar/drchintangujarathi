@@ -1,4 +1,5 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Header from '@/components/portfolio/Header';
 import Footer from '@/components/portfolio/Footer';
@@ -25,23 +26,76 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const detailed = DETAILED_PROCEDURES[slug];
+  const canonicalUrl = `${SITE_CONFIG.domain}/services/${slug}`;
+
   if (detailed) {
+    const ogImage = detailed.images?.hero || '/images/dr-chintan-gujarathi.webp';
     return {
       title: detailed.seoMetaTitle,
       description: detailed.seoMetaDescription,
       keywords: detailed.seoKeywords,
+      alternates: {
+        canonical: canonicalUrl,
+      },
+      openGraph: {
+        title: detailed.seoMetaTitle,
+        description: detailed.seoMetaDescription,
+        url: canonicalUrl,
+        siteName: `${SITE_CONFIG.name} | Plastic, Cosmetic & Reconstructive Surgeon Pune`,
+        images: [
+          {
+            url: ogImage,
+            width: 1200,
+            height: 630,
+            alt: `${detailed.title} in Pune - Dr. Chintan Gujarathi`,
+          },
+        ],
+        locale: 'en_IN',
+        type: 'article',
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: detailed.seoMetaTitle,
+        description: detailed.seoMetaDescription,
+        images: [ogImage],
+      },
     };
   }
 
   const proc = ALL_PROCEDURES.find((p) => p.slug === slug);
   if (!proc) return { title: 'Procedure Not Found' };
 
+  const defaultOgImage = '/images/dr-chintan-gujarathi.webp';
   return {
     title: `${proc.title} in Pune | Dr. Chintan Gujarathi — Plastic Surgeon`,
     description: `${proc.title} by Dr. Chintan Gujarathi (MCh, DrNB), Senior Consultant Plastic Surgeon at Ruby Hall Clinic and Manipal Hospital Kharadi, Pune. Expert surgical care & natural results.`,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: `${proc.title} in Pune | Dr. Chintan Gujarathi`,
+      description: `${proc.title} by Dr. Chintan Gujarathi (MCh, DrNB), Senior Consultant Plastic Surgeon at Ruby Hall Clinic and Manipal Hospital Kharadi, Pune.`,
+      url: canonicalUrl,
+      siteName: `${SITE_CONFIG.name} | Plastic Surgeon Pune`,
+      type: 'article',
+      images: [
+        {
+          url: defaultOgImage,
+          width: 1200,
+          height: 630,
+          alt: `${proc.title} in Pune - Dr. Chintan Gujarathi`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${proc.title} in Pune | Dr. Chintan Gujarathi`,
+      description: `${proc.title} by Dr. Chintan Gujarathi (MCh, DrNB) at Ruby Hall Clinic and Manipal Hospital Kharadi, Pune.`,
+      images: [defaultOgImage],
+    },
   };
 }
 
@@ -67,66 +121,72 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
             alternateName: detailedData.medicalName,
             description: detailedData.seoMetaDescription,
             procedureType: 'https://schema.org/SurgicalProcedure',
+            url: `${SITE_CONFIG.domain}/services/${slug}`,
+            performer: {
+              '@type': 'Physician',
+              name: SITE_CONFIG.doctor.fullName,
+              url: SITE_CONFIG.domain,
+            },
             bodyLocation:
               detailedData.badge === 'Male Aesthetics'
                 ? 'Male Chest'
-                : detailedData.slug === 'breast-augmentation'
+                : detailedData.slug === 'breast-surgery-implants-lift-in-pune'
                 ? 'Female Breast and Chest Wall'
-                : detailedData.slug === 'cancer-reconstruction'
+                : detailedData.slug === 'cancer-reconstructive-surgery-in-pune'
                 ? 'Head, Neck, Oral Cavity, and Chest Wall'
-                : detailedData.slug === 'burns-reconstruction'
+                : detailedData.slug === 'burn-treatment-scar-surgery-in-pune'
                 ? 'Burn Injury Surface, Face, Neck, and Joints'
-                : detailedData.slug === 'trauma-reconstruction'
+                : detailedData.slug === 'trauma-plastic-surgery-in-pune'
                 ? 'Extremities, Bones, Soft Tissues, and Facial Wounds'
-                : detailedData.slug === 'hand-surgery'
+                : detailedData.slug === 'hand-surgery-carpal-tunnel-in-pune'
                 ? 'Hand, Wrist, Peripheral Nerves, and Tendons'
-                : detailedData.slug === 'facial-bone-fractures'
+                : detailedData.slug === 'facial-bone-fracture-treatment-in-pune'
                 ? 'Facial Skeleton, Mandible, ZMC, and Orbital Bones'
-                : detailedData.slug === 'chronic-wound-management'
+                : detailedData.slug === 'diabetic-foot-wound-care-in-pune'
                 ? 'Lower Extremities, Sacrum, Ischium, and Chronic Ulcer Sites'
-                : detailedData.slug === 'av-fistula-creation'
+                : detailedData.slug === 'av-fistula-surgery-in-pune'
                 ? 'Forearm and Upper Arm Vascular System (Radial & Brachial Arteries, Cephalic & Basilic Veins)'
-                : detailedData.slug === 'cosmetic-facial-suturing'
+                : detailedData.slug === 'facial-cut-scarless-suturing-in-pune'
                 ? 'Facial Skin, Forehead, Lips, Eyelids, and Cheek Lacerations'
-                : detailedData.slug === 'ear-lobule-deformity-correction'
+                : detailedData.slug === 'torn-earlobe-repair-in-pune'
                 ? 'External Ear, Auricular Cartilage, and Earlobe (Lobule)'
-                : detailedData.slug === 'pediatric-plastic-surgery'
+                : detailedData.slug === 'pediatric-plastic-surgery-cleft-lip-in-pune'
                 ? 'Lip, Hard & Soft Palate, Oral Cavity, and Pediatric Congenital Structures'
-                : detailedData.slug === 'scar-revision'
+                : detailedData.slug === 'scar-revision-keloid-treatment-in-pune'
                 ? 'Skin, Dermal Tissues, Fibrotic Contracture Bands, and Keloid Sites'
-                : detailedData.slug === 'nail-injuries-fingertip-repair'
+                : detailedData.slug === 'nail-bed-fingertip-repair-in-pune'
                 ? 'Perionychium, Nail Bed Matrix, Distal Phalanx (P3), and Fingertip Pulp'
-                : detailedData.slug === 'excision-cysts-lipomas-ganglion'
+                : detailedData.slug === 'cyst-lipoma-ganglion-excision-in-pune'
                 ? 'Subcutaneous Layer, Dermal Inclusion Cysts, Lipomatous Tissue, and Wrist Joint Capsule'
-                : detailedData.slug === 'facial-enhancements-buccal-dimple'
+                : detailedData.slug === 'buccal-fat-dimple-creation-in-pune'
                 ? 'Cheek Buccinator Muscle, Bichat Buccal Fat Pad, and Lingual Frenulum'
-                : detailedData.slug === 'anti-aging-botox-fillers'
+                : detailedData.slug === 'anti-aging-botox-fillers-in-pune'
                 ? 'Facial Mimic Musculature (Forehead, Glabella, Peri-Orbital), Malar Fat, and Perioral Soft Tissues'
-                : detailedData.slug === 'arm-and-thigh-lift'
+                : detailedData.slug === 'arm-lift-thigh-lift-surgery-in-pune'
                 ? 'Upper Arm (Brachial Region) and Medial Inner Thigh'
-                : detailedData.slug === 'genital-rejuvenation'
+                : detailedData.slug === 'female-genital-rejuvenation-in-pune'
                 ? 'Female External Genitalia, Labia Minora, Clitoral Prepuce, and Hymenal Ring'
-                : detailedData.slug === 'peripheral-nerve-surgery'
+                : detailedData.slug === 'peripheral-nerve-surgery-in-pune'
                 ? 'Peripheral Nerves, Muscle Bellies, Brachial Plexus, and Nerve Sheaths'
-                : detailedData.slug === 'mommy-makeover'
+                : detailedData.slug === 'mommy-makeover-surgery-in-pune'
                 ? 'Abdomen, Rectus Diastasis Wall, Breasts, and Waistline'
-                : detailedData.slug === 'microvascular-surgery'
+                : detailedData.slug === 'microvascular-free-flap-surgery-in-pune'
                 ? 'Microvascular Free Flap Donor & Recipient Sites, Mandible, and Lymphatic Channels'
-                : detailedData.slug === 'prp-therapy'
-                ? 'Scalp Hair Follicles, Facial Dermis, and Cutaneous Wound Beds'
-                : detailedData.slug === 'botox'
+                : detailedData.slug === 'prp-gfc-skin-treatment-in-pune'
+                ? 'Facial Dermis, Neck Skin, and Cutaneous Wound Beds'
+                : detailedData.slug === 'botox-treatment-in-pune'
                 ? 'Facial Mimic Musculature (Forehead, Glabella, Peri-Orbital)'
-                : detailedData.slug === 'dermal-fillers'
+                : detailedData.slug === 'dermal-fillers-treatment-in-pune'
                 ? 'Facial Dermis, Malar Fat, Nasolabial Folds, Lips, and Perioral Soft Tissues'
-                : detailedData.slug === 'liposuction'
+                : detailedData.slug === 'liposuction-surgery-in-pune'
                 ? 'Subcutaneous adipose tissue (Abdomen, Flanks, Back, Thighs, Chin)'
-                : detailedData.slug === 'abdominoplasty'
+                : detailedData.slug === 'tummy-tuck-abdominoplasty-in-pune'
                 ? 'Abdomen and Abdominal Muscle Wall'
                 : detailedData.badge === 'Body Sculpting'
                 ? 'Abdomen and Torso'
-                : detailedData.slug === 'rhinoplasty'
+                : detailedData.slug === 'rhinoplasty-in-pune'
                 ? 'Nose and Nasal Airway'
-                : detailedData.slug === 'blepharoplasty'
+                : detailedData.slug === 'blepharoplasty-eyelid-surgery-in-pune'
                 ? 'Eyelids and Peri-orbital Region'
                 : 'Face and Neck',
             recognizingAuthority: 'Maharashtra Medical Council',
@@ -143,6 +203,61 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                 text: faq.a,
               },
             })),
+          },
+          {
+            '@type': 'Physician',
+            name: SITE_CONFIG.doctor.fullName,
+            description: SITE_CONFIG.doctor.bio,
+            medicalSpecialty: ['PlasticSurgery', 'CosmeticSurgery', 'ReconstructiveSurgery'],
+            qualification: SITE_CONFIG.doctor.qualifications,
+            url: SITE_CONFIG.domain,
+            telephone: SITE_CONFIG.contact.phone,
+            email: SITE_CONFIG.contact.email,
+            memberOf: SITE_CONFIG.doctor.affiliations.map((a) => ({
+              '@type': 'MedicalOrganization',
+              name: a.full,
+            })),
+            hospitalAffiliation: SITE_CONFIG.locations.map((loc) => ({
+              '@type': 'Hospital',
+              name: loc.hospital,
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: loc.address,
+                addressLocality: 'Pune',
+                addressRegion: 'Maharashtra',
+                postalCode: loc.id === 'ruby-hall-sassoon' ? '411001' : '411014',
+                addressCountry: 'IN',
+              },
+              telephone: loc.phone,
+              geo: {
+                '@type': 'GeoCoordinates',
+                latitude: loc.coordinates.lat,
+                longitude: loc.coordinates.lng,
+              },
+            })),
+          },
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: SITE_CONFIG.domain,
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Services',
+                item: `${SITE_CONFIG.domain}/services`,
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: detailedData.title,
+                item: `${SITE_CONFIG.domain}/services/${slug}`,
+              },
+            ],
           },
         ],
       }
@@ -177,7 +292,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
               <div className="space-y-10">
                 {/* Centered Single Heading with Editorial Accent */}
                 <div className="text-center max-w-4xl mx-auto space-y-3">
-                  {slug === 'gynecomastia-surgery' ? (
+                  {slug === 'gynecomastia-surgery-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Gynecomastia{' '}
@@ -191,7 +306,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (Male Breast Reduction & Chest Reshaping)
                       </p>
                     </div>
-                  ) : slug === 'rhinoplasty' ? (
+                  ) : slug === 'rhinoplasty-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Rhinoplasty{' '}
@@ -205,7 +320,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (Aesthetic Nose Reshaping & Septoplasty)
                       </p>
                     </div>
-                  ) : slug === 'facelift' ? (
+                  ) : slug === 'facelift-surgery-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Facelift &{' '}
@@ -219,7 +334,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (Deep-Plane SMAS, Platysmaplasty & Endoscopic Brow Lift)
                       </p>
                     </div>
-                  ) : slug === 'blepharoplasty' ? (
+                  ) : slug === 'blepharoplasty-eyelid-surgery-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Blepharoplasty{' '}
@@ -233,7 +348,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (Upper Eyelid Lift & Lower Transconjunctival Bag Removal)
                       </p>
                     </div>
-                  ) : slug === 'liposuction' ? (
+                  ) : slug === 'liposuction-surgery-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Liposuction{' '}
@@ -247,7 +362,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (High-Definition VASER Body Sculpting & Fat Removal)
                       </p>
                     </div>
-                  ) : slug === 'abdominoplasty' ? (
+                  ) : slug === 'tummy-tuck-abdominoplasty-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Abdominoplasty{' '}
@@ -261,7 +376,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (Tummy Tuck, Diastasis Recti Repair & Mommy Makeover)
                       </p>
                     </div>
-                  ) : slug === 'breast-augmentation' ? (
+                  ) : slug === 'breast-surgery-implants-lift-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Breast{' '}
@@ -275,7 +390,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (Silicone Implants, Mastopexy Lift & Breast Reduction)
                       </p>
                     </div>
-                  ) : slug === 'cancer-reconstruction' ? (
+                  ) : slug === 'cancer-reconstructive-surgery-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Cancer{' '}
@@ -289,7 +404,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (Microvascular Free Flaps: ALT, Free Fibula & Autologous Breast)
                       </p>
                     </div>
-                  ) : slug === 'burns-reconstruction' ? (
+                  ) : slug === 'burn-treatment-scar-surgery-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Burn{' '}
@@ -303,7 +418,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (Acute Burn Care, Skin Grafting & Scar Contracture Release)
                       </p>
                     </div>
-                  ) : slug === 'trauma-reconstruction' ? (
+                  ) : slug === 'trauma-plastic-surgery-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Trauma{' '}
@@ -317,7 +432,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (Emergency Soft-Tissue Flaps, Open Fractures & Limb Salvage)
                       </p>
                     </div>
-                  ) : slug === 'hand-surgery' ? (
+                  ) : slug === 'hand-surgery-carpal-tunnel-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Hand{' '}
@@ -331,7 +446,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (Carpal Tunnel Release, Tendon & Nerve Repair, Hand Trauma)
                       </p>
                     </div>
-                  ) : slug === 'facial-bone-fractures' ? (
+                  ) : slug === 'facial-bone-fracture-treatment-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Facial Bone{' '}
@@ -345,7 +460,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (Mandible, ZMC Cheekbone & Orbital Floor Titanium ORIF)
                       </p>
                     </div>
-                  ) : slug === 'chronic-wound-management' ? (
+                  ) : slug === 'diabetic-foot-wound-care-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Chronic Wound{' '}
@@ -359,7 +474,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (Diabetic Foot Ulcers, Bed Sores & VAC Negative-Pressure Therapy)
                       </p>
                     </div>
-                  ) : slug === 'av-fistula-creation' ? (
+                  ) : slug === 'av-fistula-surgery-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         AV Fistula{' '}
@@ -373,7 +488,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (Radiocephalic & Brachiocephalic Dialysis Vascular Access)
                       </p>
                     </div>
-                  ) : slug === 'cosmetic-facial-suturing' ? (
+                  ) : slug === 'facial-cut-scarless-suturing-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Cosmetic Facial{' '}
@@ -387,7 +502,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (Emergency Micro-Layered Stitching for Cuts & Lacerations)
                       </p>
                     </div>
-                  ) : slug === 'ear-lobule-deformity-correction' ? (
+                  ) : slug === 'torn-earlobe-repair-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Ear Lobule{' '}
@@ -401,7 +516,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (Torn Earlobe Lobuloplasty & Prominent Ear Otoplasty)
                       </p>
                     </div>
-                  ) : slug === 'pediatric-plastic-surgery' ? (
+                  ) : slug === 'pediatric-plastic-surgery-cleft-lip-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Pediatric Plastic{' '}
@@ -415,7 +530,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (Cleft Lip Cheiloplasty, Cleft Palate & Congenital Anomaly Repair)
                       </p>
                     </div>
-                  ) : slug === 'scar-revision' ? (
+                  ) : slug === 'scar-revision-keloid-treatment-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Scar Revision &{' '}
@@ -429,7 +544,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (Geometric Z-Plasty, Contracture Release & Multimodal Keloid Care)
                       </p>
                     </div>
-                  ) : slug === 'nail-injuries-fingertip-repair' ? (
+                  ) : slug === 'nail-bed-fingertip-repair-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Nail Bed Injury &{' '}
@@ -443,7 +558,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (Micro-Matrix Repair, Subungual Hematoma Drainage & Atasoy V-Y Flap Coverage)
                       </p>
                     </div>
-                  ) : slug === 'excision-cysts-lipomas-ganglion' ? (
+                  ) : slug === 'cyst-lipoma-ganglion-excision-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Cyst, Lipoma &{' '}
@@ -457,7 +572,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (Day-Care Intact Capsule Removal, Minimal-Incision Lipoma Extraction & Stalk Resection)
                       </p>
                     </div>
-                  ) : slug === 'facial-enhancements-buccal-dimple' ? (
+                  ) : slug === 'buccal-fat-dimple-creation-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Dimple Creation &{' '}
@@ -471,7 +586,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (Intraoral Dimpleplasty, Cheek Slimming & Lingual Frenuloplasty)
                       </p>
                     </div>
-                  ) : slug === 'anti-aging-botox-fillers' ? (
+                  ) : slug === 'anti-aging-botox-fillers-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Botox &{' '}
@@ -485,7 +600,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (US-FDA Anti-Aging Treatments, Dynamic Line Smoothing & MD Codes™ Liquid Facelift)
                       </p>
                     </div>
-                  ) : slug === 'arm-and-thigh-lift' ? (
+                  ) : slug === 'arm-lift-thigh-lift-surgery-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Arm Lift &{' '}
@@ -499,7 +614,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (Medial Brachioplasty, Thighplasty & Post-Bariatric Extremity Reshaping)
                       </p>
                     </div>
-                  ) : slug === 'genital-rejuvenation' ? (
+                  ) : slug === 'female-genital-rejuvenation-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Genital Rejuvenation{' '}
@@ -513,7 +628,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (Confidential Aesthetic Wedge Labiaplasty & Reconstructive Hymenoplasty)
                       </p>
                     </div>
-                  ) : slug === 'peripheral-nerve-surgery' ? (
+                  ) : slug === 'peripheral-nerve-surgery-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Peripheral Nerve{' '}
@@ -527,7 +642,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (Diagnostic Nerve & Muscle Biopsy, Schwannoma Enucleation & Microsurgical Reconstruction)
                       </p>
                     </div>
-                  ) : slug === 'mommy-makeover' ? (
+                  ) : slug === 'mommy-makeover-surgery-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Mommy Makeover{' '}
@@ -541,7 +656,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (Combined Tummy Tuck, Breast Lift/Augmentation & High-Definition Lipo 360)
                       </p>
                     </div>
-                  ) : slug === 'microvascular-surgery' ? (
+                  ) : slug === 'microvascular-free-flap-surgery-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Microvascular{' '}
@@ -555,7 +670,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (Supermicrosurgery, Free Perforator Flaps, Free Fibula Jaw Reconstruction & LVA)
                       </p>
                     </div>
-                  ) : slug === 'prp-therapy' ? (
+                  ) : slug === 'prp-gfc-skin-treatment-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         PRP & GFC{' '}
@@ -566,10 +681,10 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         in Pune
                       </h1>
                       <p className="text-xs sm:text-sm text-[#7A6F87] font-medium tracking-wide mt-1.5">
-                        (Autologous Platelet-Rich Plasma, Growth Factor Concentrate for Hair Loss & Skin Glow)
+                        (Autologous Platelet-Rich Plasma, Growth Factor Concentrate for Facial Glow & Scar Remodeling)
                       </p>
                     </div>
-                  ) : slug === 'botox' ? (
+                  ) : slug === 'botox-treatment-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Botox Wrinkle{' '}
@@ -583,7 +698,7 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                         (US-FDA Dynamic Line Smoothing, Forehead Lines, Crow's Feet & Masseter Slimming)
                       </p>
                     </div>
-                  ) : slug === 'dermal-fillers' ? (
+                  ) : slug === 'dermal-fillers-treatment-in-pune' ? (
                     <div>
                       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-[#221E2A] leading-[1.12]">
                         Dermal{' '}
@@ -628,38 +743,75 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
 
                   <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
                     
-                    {/* Left Column (7 cols) */}
+                    {/* Left Column (7 cols): Clean Editorial Overview */}
                     <div className="lg:col-span-7 flex flex-col justify-between space-y-5">
-                      <p className="font-serif text-lg sm:text-[20px] lg:text-[21px] text-[#221E2A] leading-[1.6] font-normal tracking-[-0.01em]">
-                        {detailedData.overview.introParagraph}
-                      </p>
-                      <p className="text-xs sm:text-[13.5px] text-[#675F72] leading-[1.7] border-t border-[#E8DEF0] pt-4 font-sans">
-                        Operated by <strong className="text-[#25202E] font-semibold">Dr. Chintan Gujarathi</strong> (MCh Plastic Surgery, Tata Memorial Hospital Fellow) at accredited tertiary centers (<strong className="text-[#25202E] font-semibold">Ruby Hall Clinic</strong>, Sassoon Rd & <strong className="text-[#25202E] font-semibold">Manipal Hospital Kharadi</strong>), utilizing <strong className="text-[#25202E] font-semibold">sub-millimeter precision</strong>, concealed micro-incisions, and advanced tissue-handling for <strong className="text-[#25202E] font-semibold">natural, permanent outcomes</strong>.
-                      </p>
+                      <div className="space-y-3.5">
+                        <div className="w-full sm:w-auto flex justify-center sm:justify-start">
+                          <div className="inline-flex items-center justify-center gap-2 px-4 sm:px-3.5 py-1.5 rounded-full bg-white/90 border border-[#DECBEB] shadow-2xs text-[10px] sm:text-[11px] font-bold tracking-[0.16em] sm:tracking-[0.2em] text-[#9784B4] uppercase w-auto max-w-[290px] sm:max-w-none">
+                            <span className="shrink-0 text-xs">✦</span>
+                            <span className="hidden sm:inline">CLINICAL OVERVIEW & SURGICAL APPROACH</span>
+                            <span className="sm:hidden text-center whitespace-nowrap">Clinical Overview & Approach</span>
+                            <span className="shrink-0 text-xs">✦</span>
+                          </div>
+                        </div>
 
-                      {/* 4 Clinical Pillars Grid - Inspired by Homepage 'What We Do' Capsule Design */}
+                        <p className="text-[13.5px] sm:text-[14.5px] text-[#3D3449] leading-[1.75] font-sans font-normal pt-0.5">
+                          {detailedData.overview.introParagraph}
+                        </p>
+
+                        {/* Subtle Horizontal Rule Separator */}
+                        <hr className="border-t border-[#DECBEB]/80 my-2.5" />
+
+                        <p className="text-[13.5px] sm:text-[14.5px] text-[#554B64] leading-[1.75] font-sans font-normal">
+                          Operated personally by <strong className="text-[#25202E] font-semibold">Dr. Chintan Gujarathi</strong> (MCh Plastic Surgery, Tata Memorial Hospital Fellow) at accredited tertiary centers (<strong className="text-[#25202E] font-semibold">Ruby Hall Clinic</strong>, Sassoon Rd & <strong className="text-[#25202E] font-semibold">Manipal Hospital Kharadi</strong>), utilizing <strong className="text-[#25202E] font-semibold">sub-millimeter precision</strong>, concealed micro-incisions, and advanced tissue-handling for <strong className="text-[#25202E] font-semibold">natural, permanent outcomes</strong>.
+                        </p>
+                      </div>
+
+                      {/* 4 Clinical Pillars Grid - Enhanced with Meaningful Surgical SVGs */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
                         {detailedData.heroStats.map((stat, sIdx) => {
                           const themeStyles = [
                             {
                               bg: 'bg-[#9784B4]',
                               border: 'border-[#DDD3E4]',
-                              icon: '✦',
+                              renderIcon: () => (
+                                <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                                  <path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z" />
+                                </svg>
+                              ),
                             },
                             {
                               bg: 'bg-[#E8A88E]',
                               border: 'border-[#F3DDD2]',
-                              icon: '🛡️',
+                              renderIcon: () => (
+                                <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                  <path d="m9 12 2 2 4-4" />
+                                </svg>
+                              ),
                             },
                             {
                               bg: 'bg-[#478262]',
                               border: 'border-[#D4EADE]',
-                              icon: '🏥',
+                              renderIcon: () => (
+                                <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                                  <path d="M3 21h18" />
+                                  <path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16" />
+                                  <path d="M10 9h4" />
+                                  <path d="M12 7v4" />
+                                  <path d="M10 16h4" />
+                                </svg>
+                              ),
                             },
                             {
                               bg: 'bg-[#5873AB]',
                               border: 'border-[#D3E3F7]',
-                              icon: '★',
+                              renderIcon: () => (
+                                <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                                  <circle cx="12" cy="8" r="6" />
+                                  <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.2 0l-3.58 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" />
+                                </svg>
+                              ),
                             },
                           ];
                           const style = themeStyles[sIdx % themeStyles.length];
@@ -667,12 +819,12 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                           return (
                             <div
                               key={sIdx}
-                              className={`rounded-full bg-white/80 hover:bg-white border ${style.border} py-2 px-3.5 flex items-center gap-3 transition-all duration-300 shadow-2xs hover:shadow-xs group`}
+                              className={`rounded-full bg-white/85 hover:bg-white border ${style.border} py-2 px-3.5 flex items-center gap-3 transition-all duration-300 shadow-2xs hover:shadow-xs group`}
                             >
                               <div
-                                className={`w-9 h-9 rounded-full ${style.bg} flex items-center justify-center shrink-0 text-white shadow-2xs group-hover:scale-105 transition-transform text-xs font-bold`}
+                                className={`w-9 h-9 rounded-full ${style.bg} flex items-center justify-center shrink-0 text-white shadow-2xs group-hover:scale-105 transition-transform`}
                               >
-                                {style.icon}
+                                {style.renderIcon()}
                               </div>
                               <div className="min-w-0 pr-1">
                                 <h4 className="font-bold text-xs sm:text-[12.5px] text-[#2A2533] leading-tight truncate">

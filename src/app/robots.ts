@@ -1,0 +1,29 @@
+import { MetadataRoute } from 'next';
+import { SITE_CONFIG } from '@/lib/site-config';
+
+export const dynamic = 'force-static';
+
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+      },
+      {
+        userAgent: [
+          'GPTBot',
+          'ChatGPT-User',
+          'ClaudeBot',
+          'Claude-Web',
+          'PerplexityBot',
+          'Google-Extended',
+          'Applebot-Extended',
+          'CCBot',
+        ],
+        allow: '/',
+      },
+    ],
+    sitemap: `${SITE_CONFIG.domain}/sitemap.xml`,
+  };
+}

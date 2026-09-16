@@ -18,7 +18,18 @@ export default function HeroSection() {
           {/* Left Column: Headline, Peach Swoosh, Clinical Bio & Desktop CTAs */}
           <div className="lg:col-span-6 flex flex-col items-center text-center lg:items-start lg:text-left z-10 lg:pr-4">
             
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[80px] font-normal leading-[1.03] text-[#221E2A] tracking-tight text-center lg:text-left mt-2 sm:mt-4 lg:mt-0">
+            {/* High-Intent SEO Eyebrow Badge */}
+            <div className="inline-flex items-center justify-center gap-2 px-4 sm:px-3.5 py-1.5 rounded-full bg-[#FAF5EE] border border-[#E8DEC8] shadow-2xs mb-3.5 max-w-[280px] sm:max-w-none">
+              <span className="text-[#E8A88E] text-xs shrink-0">★</span>
+              <span className="hidden sm:inline text-[10px] sm:text-[11px] font-bold tracking-[0.2em] uppercase text-[#6D5F7A]">
+                Senior Consultant Plastic & Cosmetic Surgeon in Pune
+              </span>
+              <span className="sm:hidden text-[10px] font-bold tracking-[0.16em] uppercase text-[#6D5F7A] text-center whitespace-nowrap">
+                Plastic & Cosmetic Surgeon • Pune
+              </span>
+            </div>
+
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[80px] font-normal leading-[1.03] text-[#221E2A] tracking-tight text-center lg:text-left mt-1">
               Sculpting
               <br />
               <span className="font-serif italic font-normal text-[#9683B5] inline-flex items-center">
@@ -41,9 +52,9 @@ export default function HeroSection() {
               </svg>
             </div>
 
-            {/* Clinical Bio text */}
-            <p className="mt-8 text-[#675F72] text-sm sm:text-[15px] leading-[1.75] max-w-[460px] font-normal mx-auto lg:mx-0 text-center lg:text-left">
-              Led by <span className="font-semibold text-[#25202E]">Dr. Chintan Gujarathi</span> (MBBS, MS, MCh, DrNB) — Senior Consultant Plastic, Cosmetic & Reconstructive Surgeon in Pune. Delivering 15+ years of surgical mastery and personalized aesthetic transformations at <span className="font-medium text-[#25202E]">Ruby Hall Clinic</span> and <span className="font-medium text-[#25202E]">Manipal Hospital</span>.
+            {/* Clinical Bio text with primary target SEO keywords */}
+            <p className="mt-8 text-[#675F72] text-sm sm:text-[15px] leading-[1.75] max-w-[480px] font-normal mx-auto lg:mx-0 text-center lg:text-left">
+              Consult with <span className="font-semibold text-[#25202E]">Dr. Chintan Gujarathi</span> (MBBS, MS, MCh, DrNB) — one of the best plastic surgeons in Pune with 15+ years of surgical mastery. Specializing in <span className="font-medium text-[#25202E]">Rhinoplasty, Gynecomastia Surgery, Liposuction, Earlobe Repair & Reconstructive Microsurgery</span> with premier hospital privileges at <span className="font-medium text-[#25202E]">Ruby Hall Clinic</span> and <span className="font-medium text-[#25202E]">Manipal Hospital</span>.
             </p>
 
             {/* Desktop Consultation CTA buttons (Hidden on mobile) */}
