@@ -44,8 +44,8 @@ const CREDENTIAL_ITEMS = [
     cardBg: 'bg-gradient-to-br from-white to-[#FAF6FE]',
     borderColor: 'border-[#DECBEB] hover:border-[#9784B4]',
     title: 'M.Ch & DrNB (Plastic Surgery)',
-    institution: 'National Board of Examinations & Apex Universities',
-    desc: 'Highest dual super-specialty board licensure in plastic, cosmetic, and reconstructive surgery in India, reflecting 6+ years of dedicated surgical residency.',
+    institution: 'Grant GMC & Sir J.J. Hospital, Mumbai / NBE',
+    desc: 'Highest dual super-specialty board licensure in plastic, cosmetic, and reconstructive surgery in India, rooted in South Asia’s historic Grant Medical College & Sir J.J. Group of Hospitals (Est. 1845).',
   },
   {
     badge: 'GENERAL SURGERY',
@@ -133,7 +133,7 @@ const SPECIALTY_ITEMS = [
   {
     image: '/images/procedures/reconstructive-surgery.webp',
     imageAlt: 'Specialist reconstructive surgeon operating in advanced microsurgical theatre in Pune',
-    floatingBadge: '500+ Microsurgeries',
+    floatingBadge: '1,000+ Microsurgeries',
     floatingBadgeClass: 'bg-[#25202E]/85 text-white border-white/20',
     badge: 'RECONSTRUCTIVE SURGERY',
     badgeClass: 'bg-[#2E6B4F]/15 text-[#1E5239] border-[#2E6B4F]/25',
@@ -163,8 +163,9 @@ export default function AboutPage() {
           jobTitle: 'Senior Consultant Plastic, Cosmetic & Reconstructive Surgeon',
           medicalSpecialty: ['PlasticSurgery', 'CosmeticSurgery', 'ReconstructiveSurgery'],
           description:
-            'Senior Consultant Plastic, Cosmetic, and Reconstructive Surgeon in Pune with 15+ years of clinical mastery. Dual board certified (MCh, DrNB) with advanced fellowships from Tata Memorial and Ganga Hospital.',
+            'Senior Consultant Plastic, Cosmetic, and Reconstructive Surgeon in Pune with 15+ years of clinical mastery. Dual board certified (MCh, DrNB) trained at Grant Government Medical College & Sir J.J. Group of Hospitals, Mumbai with 1,000+ microsurgeries.',
           alumniOf: [
+            { '@type': 'EducationalOrganization', name: 'Grant Government Medical College & Sir J.J. Group of Hospitals, Mumbai (M.Ch Plastic Surgery)' },
             { '@type': 'EducationalOrganization', name: 'National Board of Examinations (DrNB Plastic Surgery)' },
             { '@type': 'EducationalOrganization', name: 'Tata Memorial Hospital, Mumbai (Fellowship in Oncoreconstruction)' },
             { '@type': 'EducationalOrganization', name: 'Ganga Hospital, Coimbatore (Fellowship in Trauma & Hand Surgery)' },
@@ -220,38 +221,49 @@ export default function AboutPage() {
         
         {/* ─── SECTION 1: HERO LEAD SURGEON PROFILE CARD (Golden Mean Proportions) ─── */}
         <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8">
-          <div className="bg-gradient-to-br from-[#FAF3EC] via-[#F4ECF7] to-[#EBE2F3] rounded-[32px] border border-[#DFCEEE] p-7 sm:p-9 lg:p-11 card-shadow">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          <div className="bg-gradient-to-br from-[#FAF3EC] via-[#F4ECF7] to-[#EBE2F3] rounded-[32px] border border-[#DFCEEE] p-7 sm:p-9 lg:p-12 card-shadow">
+            
+            {/* Top Grid: Doctor Profile & Primary Bio */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
               
               {/* Left Column: Doctor Bio & CTAs */}
               <div className="lg:col-span-7 flex flex-col items-start">
-                {/* High-Intent SEO Eyebrow Badge (Centered & streamlined for mobile screens only, laptop view preserved) */}
+                
+                {/* High-Intent SEO Eyebrow Badge */}
                 <div className="w-full sm:w-auto flex justify-center sm:justify-start">
-                  <div className="inline-flex items-center justify-center gap-2 px-4 sm:px-3.5 py-1.5 sm:py-1 rounded-full bg-white/90 border border-[#EDE6F5] mb-3 shadow-2xs max-w-[280px] sm:max-w-none">
+                  <div className="inline-flex items-center justify-center gap-2 px-4 sm:px-3.5 py-1.5 sm:py-1 rounded-full bg-white/90 border border-[#EDE6F5] mb-3.5 shadow-2xs">
                     <span className="text-[#E8A88E] text-xs shrink-0">★</span>
-                    <span className="hidden sm:inline text-[10.5px] font-bold tracking-[0.22em] text-[#7D649B] uppercase">
-                      SENIOR CONSULTANT PLASTIC & COSMETIC SURGEON IN PUNE
-                    </span>
-                    <span className="sm:hidden text-[10px] font-bold tracking-[0.16em] text-[#7D649B] uppercase text-center whitespace-nowrap">
-                      Plastic & Cosmetic Surgeon • Pune
+                    <span className="text-[10px] sm:text-[10.5px] font-bold tracking-[0.18em] text-[#7D649B] uppercase text-center">
+                      PLASTIC, COSMETIC & RECONSTRUCTIVE SURGEON • MICROSURGERY SPECIALIST
                     </span>
                   </div>
                 </div>
 
                 <h1 className="text-3xl sm:text-4xl lg:text-[44px] font-normal leading-[1.12] text-[#25202E]">
-                  Dr. Chintan <span className="font-serif italic text-[#9784B4]">S. Gujarathi</span>
+                  Meet Dr. Chintan <span className="font-serif italic text-[#9784B4]">Gujarathi</span>
                 </h1>
 
-                <p className="mt-2 text-xs sm:text-[12.5px] font-semibold text-[#8E5E85] tracking-wider uppercase">
-                  MBBS • MS (Gen. Surgery) • M.Ch & DrNB (Plastic Surgery)
+                <p className="mt-2 text-xs sm:text-[13px] font-semibold text-[#8E5E85] tracking-wider uppercase">
+                  MBBS • MS (General Surgery) • M.Ch & DrNB (Plastic & Reconstructive Surgery)
                 </p>
 
-                <p className="mt-4 text-[13.5px] sm:text-[14.5px] lg:text-[15px] text-[#554B64] leading-[1.72]">
-                  Dr. Chintan S. Gujarathi is widely regarded as one of the best plastic, cosmetic, and reconstructive surgeons in Pune, bringing over <strong>15+ years of clinical mastery</strong> and surgical leadership. As a Senior Consultant with active surgical privileges at <strong>Ruby Hall Clinic (Sassoon Road)</strong> and <strong>Manipal Hospital (Kharadi)</strong>, he provides comprehensive, world-class aesthetic and restorative care.
+                {/* Opening Philosophical Lead Box */}
+                <div className="mt-4 sm:mt-5 p-4 sm:p-5 rounded-2xl bg-white/80 border border-[#EDE6F5] shadow-2xs">
+                  <p className="font-serif text-sm sm:text-[15.5px] text-[#3D344B] italic leading-[1.68]">
+                    “Some surgical journeys are built not only on degrees, but on years of learning, precision, and the experience that comes from performing surgery where every movement matters.”
+                  </p>
+                </div>
+
+                <p className="mt-4 text-[13.5px] sm:text-[14.5px] lg:text-[15px] text-[#554B64] leading-[1.74]">
+                  Dr. Chintan Gujarathi represents a distinctive blend of <strong>academic excellence</strong>, <strong>extensive surgical experience</strong>, <strong>advanced training</strong>, and <strong>practical surgical fluency</strong>. With qualifications including <strong>MBBS</strong>, <strong>MS (General Surgery)</strong>, <strong>MCh (Plastic & Reconstructive Surgery)</strong>, and <strong>DrNB (Plastic Surgery)</strong>, his professional journey reflects a deep commitment to the art and science of modern plastic and reconstructive surgery.
                 </p>
 
-                <p className="mt-3 text-[13.5px] sm:text-[14.5px] lg:text-[15px] text-[#554B64] leading-[1.72]">
-                  With dual super-specialty board certifications (M.Ch and DrNB) and prestigious advanced fellowships at <strong>Tata Memorial Hospital (Mumbai)</strong> and <strong>Ganga Hospital (Coimbatore)</strong>, Dr. Gujarathi has successfully executed <strong>500+ complex microvascular free flaps</strong>, structural rhinoplasties, VASER liposuction, and body contouring procedures with a compassionate, patient-first ethos.
+                <p className="mt-3.5 text-[13.5px] sm:text-[14.5px] lg:text-[15px] text-[#554B64] leading-[1.74]">
+                  His advanced surgical training is rooted in the prestigious <strong>Grant Government Medical College & Sir J.J. Group of Hospitals, Mumbai</strong>—an institution established in 1845 and among the oldest medical colleges in South Asia. The Sir J.J. Group of Hospitals&apos; Plastic Surgery department carries a remarkable legacy in reconstructive and microsurgical care, with expertise spanning procedures such as <strong>replantation</strong>, <strong>vascular repair</strong>, <strong>tendon reconstruction</strong>, <strong>skin grafting</strong>, and <strong>complex reconstructive surgery</strong>.
+                </p>
+
+                <p className="mt-3.5 text-[13.5px] sm:text-[14.5px] lg:text-[15px] text-[#554B64] leading-[1.74]">
+                  Over the years, Dr. Gujarathi has developed expertise in <strong>microsurgery</strong>, <strong>reconstructive surgery</strong>, <strong>trauma reconstruction</strong>, <strong>limb reconstruction</strong>, <strong>replantation</strong>, and <strong>aesthetic surgery</strong>. His experience of performing <strong>1,000+ microsurgeries</strong> reflects not merely a number, but thousands of moments where <strong>surgical precision, judgement, and steady hands</strong> can make a meaningful difference.
                 </p>
 
                 <div className="mt-6 flex flex-wrap items-center gap-3.5">
@@ -270,36 +282,102 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              {/* Right Column: Doctor Portrait Photo (Well-Proportioned) */}
-              <div className="lg:col-span-5 flex justify-center">
-                <div className="relative w-full max-w-[310px] sm:max-w-[325px] aspect-[4/5] rounded-[28px] overflow-hidden border-2 border-white bg-[#FAF8F5] shadow-lg group">
+              {/* Right Column: Doctor Portrait Photo & Trust Highlights */}
+              <div className="lg:col-span-5 flex flex-col items-center">
+                <div className="relative w-full max-w-[320px] sm:max-w-[340px] aspect-[4/5] rounded-[28px] overflow-hidden border-2 border-white bg-[#FAF8F5] shadow-lg group">
                   <Image
                     src="/images/dr-chintan-gujarathi.webp"
-                    alt="Dr. Chintan S. Gujarathi — Best Plastic Surgeon Pune"
+                    alt="Dr. Chintan Gujarathi — Plastic, Cosmetic & Reconstructive Surgeon in Pune"
                     fill
                     priority
                     className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 1024px) 100vw, 300px"
+                    sizes="(max-width: 1024px) 100vw, 340px"
                   />
 
-                  {/* Floating Experience Badge */}
-                  <div className="absolute top-3.5 left-3.5 z-10 bg-[#25202E]/80 backdrop-blur-md text-white px-3 py-1 rounded-full border border-white/20 text-[9.5px] font-bold tracking-wider uppercase shadow-xs">
-                    15+ Years Mastery
+                  {/* Floating Milestone Badge */}
+                  <div className="absolute top-3.5 left-3.5 z-10 bg-[#25202E]/85 backdrop-blur-md text-white px-3.5 py-1.5 rounded-full border border-white/20 text-[9.5px] font-bold tracking-wider uppercase shadow-xs">
+                    ✦ 1,000+ Microsurgeries
                   </div>
 
                   {/* Bottom Doctor Tag */}
-                  <div className="absolute bottom-3.5 left-3.5 right-3.5 z-10 bg-white/92 backdrop-blur-md rounded-xl p-2.5 border border-[#EDE6F5] shadow-md text-center">
-                    <span className="font-serif text-xs sm:text-[13px] font-semibold text-[#25202E] block">
-                      Dr. Chintan S. Gujarathi
+                  <div className="absolute bottom-3.5 left-3.5 right-3.5 z-10 bg-white/95 backdrop-blur-md rounded-xl p-3 border border-[#EDE6F5] shadow-md text-center">
+                    <span className="font-serif text-sm font-semibold text-[#25202E] block">
+                      Dr. Chintan Gujarathi
                     </span>
                     <span className="text-[10px] text-[#7D649B] font-medium block mt-0.5">
-                      Ruby Hall Clinic & Manipal Hospital, Pune
+                      Ruby Hall Clinic & Manipal Hospital Kharadi, Pune
                     </span>
                   </div>
                 </div>
+
+                {/* Trust Highlights Grid below photo */}
+                <div className="w-full max-w-[340px] mt-4 grid grid-cols-2 gap-2.5">
+                  <div className="bg-white/85 rounded-xl p-2.5 border border-[#EDE6F5] shadow-2xs text-center">
+                    <span className="text-xs font-bold text-[#25202E] block">1,000+</span>
+                    <span className="text-[9.5px] text-[#7D649B] font-medium block">Microsurgeries</span>
+                  </div>
+                  <div className="bg-white/85 rounded-xl p-2.5 border border-[#EDE6F5] shadow-2xs text-center">
+                    <span className="text-xs font-bold text-[#25202E] block">Sir J.J. Group</span>
+                    <span className="text-[9.5px] text-[#7D649B] font-medium block">Mumbai (Est. 1845)</span>
+                  </div>
+                  <div className="bg-white/85 rounded-xl p-2.5 border border-[#EDE6F5] shadow-2xs text-center">
+                    <span className="text-xs font-bold text-[#25202E] block">M.Ch & DrNB</span>
+                    <span className="text-[9.5px] text-[#7D649B] font-medium block">Dual Board Licensure</span>
+                  </div>
+                  <div className="bg-white/85 rounded-xl p-2.5 border border-[#EDE6F5] shadow-2xs text-center">
+                    <span className="text-xs font-bold text-[#25202E] block">15+ Years</span>
+                    <span className="text-[9.5px] text-[#7D649B] font-medium block">Surgical Fluency</span>
+                  </div>
+                </div>
+
               </div>
 
             </div>
+
+            {/* ─── LOWER SECTION OF MAIN INTRO: WHERE EXPERIENCE MEETS PRECISION ─── */}
+            <div className="mt-10 sm:mt-12 pt-8 sm:pt-10 border-t border-[#DFCEEE]/70">
+              <div className="max-w-4xl">
+                
+                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/85 border border-[#EDE6F5] mb-3 shadow-2xs">
+                  <span className="text-[#9784B4] text-xs">✦</span>
+                  <span className="text-[10px] sm:text-[10.5px] font-bold tracking-[0.22em] text-[#7D649B] uppercase">
+                    SURGICAL MASTERY & ETHOS
+                  </span>
+                </div>
+
+                <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-normal text-[#25202E] leading-tight">
+                  Where Experience Meets{' '}
+                  <span className="font-serif italic text-[#9784B4]">Precision</span>
+                </h2>
+
+                <p className="mt-4 text-[13.5px] sm:text-[14.5px] lg:text-[15px] text-[#554B64] leading-[1.76]">
+                  As a <strong>senior and veteran plastic surgeon</strong>, Dr. Gujarathi brings together the depth of experience acquired through complex surgical practice with the precision demanded by modern plastic surgery.
+                </p>
+
+                <p className="mt-3.5 text-[13.5px] sm:text-[14.5px] lg:text-[15px] text-[#554B64] leading-[1.76]">
+                  His approach goes beyond performing a procedure. Every patient brings a different anatomy, concern, expectation, and clinical requirement. His philosophy therefore centres on <strong>careful assessment</strong>, <strong>meticulous planning</strong>, <strong>technical precision</strong>, and an <strong>individualized surgical strategy</strong>.
+                </p>
+
+                {/* Highlighted Guiding Principle Callout Box */}
+                <div className="my-6 sm:my-7 p-6 sm:p-7 rounded-2xl bg-gradient-to-r from-white via-[#FAF6FE] to-white border border-[#DECBEB] border-l-4 border-l-[#9784B4] shadow-xs">
+                  <span className="text-[10.5px] font-bold tracking-[0.2em] uppercase text-[#7D649B] block mb-1.5">
+                    ✦ GUIDING SURGICAL PRINCIPLE
+                  </span>
+                  <p className="text-xs sm:text-[13.5px] text-[#675F72] mb-2 font-medium">
+                    From complex reconstruction to aesthetic refinement, his work is guided by one principle:
+                  </p>
+                  <p className="font-serif text-lg sm:text-xl lg:text-[22px] font-medium text-[#25202E] italic leading-snug">
+                    “When surgery demands precision, knowledge and experience matters.”
+                  </p>
+                </div>
+
+                <p className="text-[13.5px] sm:text-[14.5px] lg:text-[15px] text-[#554B64] leading-[1.76]">
+                  With a career shaped by <strong>excellence, experience, and surgical discipline</strong>, Dr. Chintan Gujarathi continues to combine advanced surgical knowledge with the practical fluency that comes only through years in the operating room.
+                </p>
+
+              </div>
+            </div>
+
           </div>
         </section>
 

@@ -6098,7 +6098,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
     ],
     images: {
-      hero: '/images/procedures/genital-rejuvenation-technique.webp',
+      hero: '/images/procedures/genital-rejuvenation-hero.webp',
       anatomy: '/images/procedures/genital-rejuvenation-anatomy.webp',
       harmony: '/images/procedures/genital-rejuvenation-recovery.webp',
       neck: '/images/procedures/genital-rejuvenation-technique.webp',
