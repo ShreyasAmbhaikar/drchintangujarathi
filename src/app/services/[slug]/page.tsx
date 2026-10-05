@@ -827,9 +827,9 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                                 {style.renderIcon()}
                               </div>
                               <div className="min-w-0 pr-1">
-                                <h4 className="font-bold text-xs sm:text-[12.5px] text-[#2A2533] leading-tight truncate">
+                                <p className="font-bold text-xs sm:text-[12.5px] text-[#2A2533] leading-tight truncate">
                                   {stat.value} — {stat.label}
-                                </h4>
+                                </p>
                                 <p className="text-[10px] sm:text-[10.5px] text-[#675F72] truncate">
                                   {stat.sub}
                                 </p>
@@ -1044,15 +1044,15 @@ export default async function ProcedureDetailPage({ params }: { params: Promise<
                 </div>
 
                 <div className="bg-white rounded-[24px] border border-[#EDE6F5] p-7 card-shadow">
-                  <h4 className="font-serif text-base text-[#25202E] mb-3">
+                  <h3 className="font-serif text-base text-[#25202E] mb-3">
                     Related Procedures
-                  </h4>
-                  <div className="flex flex-col gap-2 text-xs">
+                  </h3>
+                  <div className="flex flex-col gap-1 text-xs">
                     {relatedProcedures.map((other) => (
                       <Link
                         key={other.slug}
                         href={`/services/${other.slug}`}
-                        className="py-1.5 border-b border-[#F0EBF5] text-[#554B64] hover:text-[#9784B4] transition-colors flex items-center justify-between"
+                        className="py-2.5 border-b border-[#F0EBF5] text-[#554B64] hover:text-[#9784B4] transition-colors flex items-center justify-between min-h-[38px]"
                       >
                         <span>{other.title}</span>
                         <span>→</span>

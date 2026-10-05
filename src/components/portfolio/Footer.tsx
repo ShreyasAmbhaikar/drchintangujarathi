@@ -24,9 +24,9 @@ export default function Footer() {
               <span className="text-[10px] font-bold tracking-[0.2em] text-[#FFE4D6] uppercase block">
                 COMPREHENSIVE CLINICAL DIRECTORY
               </span>
-              <h3 className="font-serif text-xl sm:text-2xl text-white font-normal mt-0.5">
+              <h2 className="font-serif text-xl sm:text-2xl text-white font-normal mt-0.5">
                 Specialty Procedures & Clinical Treatments
-              </h3>
+              </h2>
             </div>
             <Link
               href="/services"
@@ -47,18 +47,18 @@ export default function Footer() {
                   </span>
                   <Link
                     href={`/services#${cat.id}`}
-                    className="font-serif text-sm sm:text-base font-medium text-white hover:text-[#FFE4D6] transition-colors block mt-0.5"
+                    className="font-serif text-sm sm:text-base font-medium text-white hover:text-[#FFE4D6] transition-colors inline-block mt-0.5 py-1 min-h-[26px]"
                   >
                     {cat.shortTitle}
                   </Link>
                   <hr className="my-2.5 border-white/20" />
                 </div>
-                <ul className="space-y-1.5 mt-1">
+                <ul className="space-y-1 mt-1">
                   {cat.procedures.map((proc) => (
                     <li key={proc.slug}>
                       <Link
                         href={`/services/${proc.slug}`}
-                        className="text-[11.5px] text-white/85 hover:text-[#FFE4D6] hover:translate-x-1 transition-all duration-200 font-normal block leading-snug"
+                        className="text-[11.5px] text-white/85 hover:text-[#FFE4D6] hover:translate-x-1 transition-all duration-200 font-normal inline-flex items-center min-h-[26px] py-1 leading-snug"
                       >
                         {proc.title.split('(')[0].trim()}
                       </Link>
@@ -103,37 +103,37 @@ export default function Footer() {
 
           {/* Col 2: Quick Navigation in a Single Sleek Vertical List (3 cols centered on md/lg) */}
           <div className="md:col-span-3 lg:col-span-3 md:justify-self-center lg:justify-self-center flex flex-col">
-            <h4 className="text-xs font-bold tracking-[0.16em] text-[#FFE4D6] uppercase">
+            <h2 className="text-xs font-bold tracking-[0.16em] text-[#FFE4D6] uppercase">
               Quick Navigation
-            </h4>
-            <ul className="space-y-2.5 text-xs text-white/85 mt-3">
+            </h2>
+            <ul className="space-y-1.5 text-xs text-white/85 mt-3">
               <li>
-                <Link href="/" className="hover:text-[#FFE4D6] hover:translate-x-1 inline-flex items-center gap-1.5 transition-all duration-200">
+                <Link href="/" className="hover:text-[#FFE4D6] hover:translate-x-1 inline-flex items-center gap-1.5 transition-all duration-200 py-1 min-h-[26px]">
                   <span>Home</span>
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-[#FFE4D6] hover:translate-x-1 inline-flex items-center gap-1.5 transition-all duration-200">
+                <Link href="/about" className="hover:text-[#FFE4D6] hover:translate-x-1 inline-flex items-center gap-1.5 transition-all duration-200 py-1 min-h-[26px]">
                   <span>About Dr. Chintan</span>
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-[#FFE4D6] hover:translate-x-1 inline-flex items-center gap-1.5 transition-all duration-200">
+                <Link href="/services" className="hover:text-[#FFE4D6] hover:translate-x-1 inline-flex items-center gap-1.5 transition-all duration-200 py-1 min-h-[26px]">
                   <span>All Services</span>
                 </Link>
               </li>
               <li>
-                <Link href="/success-stories" className="hover:text-[#FFE4D6] hover:translate-x-1 inline-flex items-center gap-1.5 transition-all duration-200">
+                <Link href="/success-stories" className="hover:text-[#FFE4D6] hover:translate-x-1 inline-flex items-center gap-1.5 transition-all duration-200 py-1 min-h-[26px]">
                   <span>Success Stories</span>
                 </Link>
               </li>
               <li>
-                <Link href="/#reviews" className="hover:text-[#FFE4D6] hover:translate-x-1 inline-flex items-center gap-1.5 transition-all duration-200">
+                <Link href="/#reviews" className="hover:text-[#FFE4D6] hover:translate-x-1 inline-flex items-center gap-1.5 transition-all duration-200 py-1 min-h-[26px]">
                   <span>Patient Reviews</span>
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-[#FFE4D6] hover:translate-x-1 inline-flex items-center gap-1.5 transition-all duration-200">
+                <Link href="/contact" className="hover:text-[#FFE4D6] hover:translate-x-1 inline-flex items-center gap-1.5 transition-all duration-200 py-1 min-h-[26px]">
                   <span>Contact Us</span>
                 </Link>
               </li>
@@ -142,9 +142,9 @@ export default function Footer() {
 
           {/* Col 3: Sleek Hospital Consultation Centers & Direct Helpline (4 cols on md/lg) */}
           <div className="md:col-span-4 lg:col-span-4 flex flex-col">
-            <h4 className="text-xs font-bold tracking-[0.16em] text-[#FFE4D6] uppercase">
+            <h2 className="text-xs font-bold tracking-[0.16em] text-[#FFE4D6] uppercase">
               Consultation Centers
-            </h4>
+            </h2>
 
             <div className="flex flex-col gap-3 mt-3">
               {/* Ruby Hall Clinic Info Card Box */}
@@ -177,7 +177,8 @@ export default function Footer() {
                     href={rubyHall.mapUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-bold text-white hover:text-[#FFE4D6] hover:underline inline-flex items-center gap-0.5"
+                    aria-label="Directions to Ruby Hall Clinic on Google Maps (opens in new tab)"
+                    className="font-bold text-white hover:text-[#FFE4D6] hover:underline inline-flex items-center gap-0.5 py-1 min-h-[26px]"
                   >
                     <span>Directions</span>
                     <span className="text-[10px]">↗</span>
@@ -215,7 +216,8 @@ export default function Footer() {
                     href={manipal.mapUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-bold text-white hover:text-[#FFE4D6] hover:underline inline-flex items-center gap-0.5"
+                    aria-label="Directions to Manipal Hospital Kharadi on Google Maps (opens in new tab)"
+                    className="font-bold text-white hover:text-[#FFE4D6] hover:underline inline-flex items-center gap-0.5 py-1 min-h-[26px]"
                   >
                     <span>Directions</span>
                     <span className="text-[10px]">↗</span>

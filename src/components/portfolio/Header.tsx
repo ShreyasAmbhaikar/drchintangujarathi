@@ -189,9 +189,9 @@ export default function Header() {
                       <span className="text-[10px] font-bold tracking-widest text-[#B8684D] uppercase block">
                         {category.badge}
                       </span>
-                      <h4 className="font-semibold text-sm sm:text-[15px] text-[#25202E] leading-snug mt-1">
+                      <p className="font-semibold text-sm sm:text-[15px] text-[#25202E] leading-snug mt-1">
                         {category.shortTitle}
-                      </h4>
+                      </p>
                     </div>
 
                     <ul className="space-y-2.5 mt-3.5">

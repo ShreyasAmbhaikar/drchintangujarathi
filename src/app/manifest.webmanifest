@@ -1,16 +1,27 @@
 {
-  "name": "Dr. Chintan Gujarathi",
-  "short_name": "Dr. Chintan G.",
-  "description": "Best Plastic, Cosmetic & Reconstructive Surgeon in Pune",
+  "name": "Dr. Chintan Gujarathi | Plastic, Cosmetic & Reconstructive Surgeon in Pune",
+  "short_name": "Dr. Chintan",
+  "description": "Senior Consultant Plastic, Cosmetic & Reconstructive Surgeon in Pune (MCh, DrNB) at Ruby Hall Clinic & Manipal Hospital.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0E0E14",
-  "theme_color": "#0A0A0F",
+  "background_color": "#FBF9F5",
+  "theme_color": "#9784B4",
   "icons": [
     {
       "src": "/favicon.ico",
       "sizes": "48x48",
       "type": "image/x-icon"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
     }
   ]
 }

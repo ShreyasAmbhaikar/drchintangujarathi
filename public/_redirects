@@ -1,0 +1,5 @@
+# Cloudflare Pages Redirects
+# Canonical redirect: www to apex domain
+https://www.drchintangujarathi.com/* https://drchintangujarathi.com/:splat 301!
+http://www.drchintangujarathi.com/* https://drchintangujarathi.com/:splat 301!
+http://drchintangujarathi.com/* https://drchintangujarathi.com/:splat 301!

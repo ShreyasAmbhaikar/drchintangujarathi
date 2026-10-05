@@ -16,25 +16,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/about`,
+      url: `${baseUrl}/about/`,
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/services`,
+      url: `${baseUrl}/services/`,
       lastModified,
       changeFrequency: 'weekly',
       priority: 0.95,
     },
     {
-      url: `${baseUrl}/success-stories`,
+      url: `${baseUrl}/success-stories/`,
       lastModified,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/contact`,
+      url: `${baseUrl}/contact/`,
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.85,
@@ -52,7 +52,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
 
   const servicePages: MetadataRoute.Sitemap = procedureSlugs.map((slug) => ({
-    url: `${baseUrl}/services/${slug}`,
+    url: `${baseUrl}/services/${slug}/`,
     lastModified,
     changeFrequency: 'weekly',
     priority: 0.9,
