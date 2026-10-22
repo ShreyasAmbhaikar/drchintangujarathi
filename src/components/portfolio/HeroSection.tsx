@@ -12,6 +12,14 @@ export default function HeroSection() {
         }}
       />
 
+      {/* Soft atmospheric warm peach / pale golden skin-tone wash extending across the right edge */}
+      <div
+        className="absolute top-0 right-0 w-[820px] lg:w-[980px] h-[650px] lg:h-[750px] pointer-events-none -z-10 opacity-80"
+        style={{
+          background: 'radial-gradient(ellipse at 88% 46%, #FDE0D5 0%, rgba(253, 230, 220, 0.6) 42%, rgba(251, 249, 245, 0) 75%)',
+        }}
+      />
+
       <div className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 pb-6 lg:py-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center min-h-[540px]">
           
@@ -77,27 +85,27 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right Column: 3D Dome Visual & Mobile CTAs Positioned Below Image */}
-          <div className="lg:col-span-6 flex flex-col items-center justify-center lg:justify-end relative">
-            <div className="relative w-full max-w-[490px] lg:max-w-[540px] aspect-square flex items-center justify-center">
-              {/* Soft atmospheric ambient glow behind the arch */}
+          {/* Right Column: Prominent Doctor Visual & Mobile CTAs */}
+          <div className="lg:col-span-6 flex flex-col items-center justify-center lg:justify-end relative w-full">
+            <div className="relative w-full max-w-[550px] sm:max-w-[580px] lg:max-w-[620px] aspect-[4/4.1] flex items-center justify-center">
+              {/* Soft atmospheric ambient lilac aura behind the doctor */}
               <div
-                className="absolute -inset-8 pointer-events-none -z-10 opacity-70"
+                className="absolute inset-0 pointer-events-none -z-10"
                 style={{
-                  background: 'radial-gradient(ellipse at 52% 48%, #EDE2F5 0%, rgba(245, 237, 248, 0.5) 45%, rgba(251, 249, 245, 0) 72%)',
+                  background: 'radial-gradient(circle at 48% 46%, #EADDF6 0%, rgba(235, 224, 248, 0.55) 45%, rgba(251, 249, 245, 0) 70%)',
                 }}
               />
               <Image
                 src="/images/mariana-hero-dome.webp"
-                alt="Aesthetic Harmony & Precision Surgery — Dr. Chintan Gujarathi"
+                alt="Dr. Chintan Gujarathi — Plastic, Cosmetic & Reconstructive Surgeon in Pune"
                 fill
                 priority
-                className="object-contain object-center select-none"
+                className="object-contain object-bottom select-none"
                 style={{
-                  WebkitMaskImage: 'linear-gradient(to bottom, black 94%, transparent 100%)',
-                  maskImage: 'linear-gradient(to bottom, black 94%, transparent 100%)',
+                  WebkitMaskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)',
+                  maskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)',
                 }}
-                sizes="(max-width: 768px) 100vw, 540px"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 620px"
               />
             </div>
 
