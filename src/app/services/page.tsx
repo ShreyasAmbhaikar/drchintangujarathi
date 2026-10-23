@@ -188,17 +188,12 @@ export default function ServicesIndexPage() {
                       className={`${theme.cardBg} rounded-[24px] border ${theme.borderColor} p-5 sm:p-6 shadow-2xs ${theme.hoverShadow} transition-all duration-300 group flex flex-col justify-between hover:-translate-y-1`}
                     >
                       <div>
-                        {/* Clinical Specialty Tag & Star */}
-                        <div className="flex items-center justify-between gap-2 mb-3">
-                          <span className={`text-[9.5px] font-bold tracking-wider uppercase px-2.5 py-0.5 rounded-full border ${theme.numberPill}`}>
-                            {cat.badge}
-                          </span>
-                          <span className={`text-xs ${theme.starColor}`}>✦</span>
+                        <div className="flex items-start justify-between gap-2 mb-2.5">
+                          <h3 className={`font-serif text-lg font-medium text-[#25202E] ${theme.titleHover} transition-colors leading-snug`}>
+                            {proc.title}
+                          </h3>
+                          <span className={`text-xs ${theme.starColor} mt-1 shrink-0`}>✦</span>
                         </div>
-
-                        <h3 className={`font-serif text-lg font-medium text-[#25202E] ${theme.titleHover} transition-colors leading-snug`}>
-                          {proc.title}
-                        </h3>
                         <p className="mt-2.5 text-xs text-[#5E546C] leading-relaxed line-clamp-3">
                           {proc.shortDesc}
                         </p>

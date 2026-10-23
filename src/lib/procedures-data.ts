@@ -333,7 +333,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does a Facelift and Neck Lift cost in Pune?',
-        a: 'The realistic estimated cost for facial rejuvenation in Pune typically ranges between ₹1,65,000 and ₹2,85,000 for a comprehensive Deep-Plane SMAS Facelift combined with Corset Neck Platysmaplasty. For an isolated neck lift or submental contouring, the cost ranges between ₹85,000 and ₹1,45,000, while an endoscopic brow lift ranges between ₹65,000 and ₹1,10,000. These all-inclusive quotes cover Dr. Gujarathi’s surgeon fees, super-specialty hospital OT suites at Ruby Hall Clinic or Manipal Hospital Kharadi, dedicated cardiac anesthesiologist care, surgical garments, and comprehensive post-operative checkups.',
+        a: 'The cost of facial rejuvenation in Pune depends on the specific surgical approach required—whether you need a comprehensive Deep-Plane SMAS Facelift, an isolated Corset Neck Platysmaplasty, an Endoscopic Brow Lift, or a harmonious combination. Factors such as individual anatomical laxity, surgical complexity, super-specialty hospital OT suite selection at Ruby Hall Clinic or Manipal Hospital Kharadi, and anesthesiologist care determine the final plan. Please consult Dr. Chintan Gujarathi for an in-person clinical assessment and a transparent, all-inclusive personalized cost evaluation.',
       },
     ],
     images: {
@@ -565,7 +565,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does gynecomastia surgery cost in Pune?',
-        a: 'The realistic estimated cost for gynecomastia surgery in Pune ranges between ₹45,000 and ₹65,000 for Grade 1 and 2 cases, and between ₹70,000 and ₹95,000 for Grade 3 and 4 cases requiring advanced VASER ultrasonic fat liquefaction and skin redraping. This all-inclusive package covers surgeon fees, hospital OT charges at Ruby Hall Clinic or Manipal Hospital Kharadi, monitored anesthesia, the post-operative medical compression vest, and follow-up care. An exact quote is confirmed during your in-person clinical assessment.',
+        a: 'The cost of gynecomastia surgery in Pune varies based on the clinical grade of gynecomastia (Grade 1 through 4), whether glandular excision is combined with advanced VASER ultrasonic liposuction, and skin elasticity requirements. Every surgical package at Ruby Hall Clinic and Manipal Hospital Kharadi is all-inclusive, covering surgeon fees, hospital OT facilities, monitored anesthesia, medical compression garments, and post-operative follow-up care. Please consult Dr. Chintan Gujarathi for an accurate in-person clinical assessment and transparent cost details.',
       },
       {
         q: 'When can I return to work and the gym?',
@@ -804,7 +804,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does a nose job (rhinoplasty) cost in Pune?',
-        a: 'The realistic estimated cost for rhinoplasty in Pune typically ranges between ₹75,000 and ₹1,10,000 for standard or closed procedures (such as dorsal hump reduction or bridge narrowing), and between ₹1,15,000 and ₹1,75,000 for open structural septorhinoplasty or complex revision surgeries requiring cartilage grafting and breathing airway correction. This comprehensive fee covers surgeon fees, hospital OT charges at Ruby Hall Clinic or Manipal Hospital Kharadi, general anesthesia, silicone airway splints, and post-operative follow-up visits.',
+        a: 'The cost of rhinoplasty in Pune depends on whether a closed preservation rhinoplasty or an open structural septorhinoplasty is indicated, whether functional airway septoplasty is needed, and whether rib or ear cartilage grafting is required for revision cases. Surgical packages at Ruby Hall Clinic and Manipal Hospital Kharadi cover surgeon fees, accredited hospital OT facilities, general anesthesia, silicone airway splints, and follow-up visits. Please consult Dr. Chintan Gujarathi for an in-person nasal assessment and transparent cost estimate.',
       },
       {
         q: 'How long until I see the final results of my rhinoplasty?',
@@ -1051,7 +1051,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does liposuction cost in Pune?',
-        a: 'The realistic estimated cost for VASER liposuction in Pune typically ranges between ₹65,000 and ₹1,10,000 for targeted single areas (such as upper and lower abdomen or flanks), between ₹1,15,000 and ₹1,95,000 for comprehensive 360° circumferential torso sculpting (abdomen, flanks, and lower back), and between ₹35,000 and ₹55,000 for submental double chin reduction. This includes Dr. Chintan Gujarathi’s surgical fee, state-of-the-art VASER equipment, tertiary OT & overnight hospital stay at Ruby Hall Clinic or Manipal Hospital Kharadi, anesthesia, specialized medical compression garments, and comprehensive post-operative follow-up visits.',
+        a: 'The cost of liposuction in Pune depends on the number and extent of anatomical areas treated (such as isolated abdomen, love handles, thighs, arms, or comprehensive 360° circumferential torso sculpting), the volume of adipose tissue removed, and the advanced VASER ultrasonic technology utilized. Comprehensive quotes at Ruby Hall Clinic and Manipal Hospital Kharadi include hospital admission, anesthesia, specialized post-operative compression garments, and follow-up visits. Please consult Dr. Chintan Gujarathi for an in-person body contouring assessment and transparent pricing.',
       },
     ],
     images: {
@@ -1292,7 +1292,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does abdominoplasty (tummy tuck) cost in Pune?',
-        a: 'The realistic estimated cost for abdominoplasty in Pune ranges between ₹85,000 and ₹1,35,000 for a mini tummy tuck, between ₹1,25,000 and ₹1,95,000 for a full abdominoplasty with complete diastasis recti muscle repair, and between ₹1,95,000 and ₹3,25,000 for a comprehensive Mommy Makeover (combining tummy tuck, 360° VASER liposuction, and breast lift/reduction). This all-inclusive fee covers Dr. Gujarathi’s surgical fee, accredited hospital OT facilities and stay at Ruby Hall Clinic or Manipal Hospital Kharadi, anesthesia, specialized medical abdominal binders, and post-operative care.',
+        a: 'The cost of abdominoplasty in Pune varies depending on whether a mini tummy tuck, a full abdominoplasty with rectus diastasis muscle plication, or an extended Mommy Makeover is required. Clinical factors including the degree of skin laxity, concurrent VASER liposculpting, and hospital stay duration at Ruby Hall Clinic or Manipal Hospital Kharadi determine the package. Please consult Dr. Chintan Gujarathi for an in-person clinical examination and an all-inclusive personalized cost estimate.',
       },
       {
         q: 'Can I combine a tummy tuck with liposuction in the same surgery?',
@@ -1536,7 +1536,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does blepharoplasty (eyelid surgery) cost in Pune?',
-        a: 'The realistic estimated cost for blepharoplasty in Pune ranges between ₹45,000 and ₹75,000 for upper eyelid lift surgery, between ₹55,000 and ₹85,000 for lower transconjunctival bag removal, and between ₹90,000 and ₹1,45,000 for comprehensive combined upper and lower blepharoplasty. This fee covers Dr. Gujarathi’s surgeon fees, accredited hospital OT facilities at Ruby Hall Clinic or Manipal Hospital Kharadi, anesthesia, specialized micro-sutures, and post-operative follow-up visits.',
+        a: 'The cost of blepharoplasty in Pune depends on whether you undergo upper eyelid skin hooding correction, lower transconjunctival eye bag fat repositioning, or comprehensive four-lid rejuvenation. Operating in accredited hospital OT suites at Ruby Hall Clinic or Manipal Hospital Kharadi ensures dedicated ophthalmic-plastic precision and patient safety. Please consult Dr. Chintan Gujarathi for an individualized eyelid assessment and transparent cost details.',
       },
       {
         q: 'How long do the results of eyelid surgery last?',
@@ -1775,7 +1775,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
     faqs: [
       {
         q: 'How much does breast surgery (implants, lift, or reduction) cost in Pune?',
-        a: 'The realistic estimated cost for breast surgery in Pune ranges between ₹1,10,000 and ₹1,85,000 for primary dual-plane breast augmentation with US-FDA approved cohesive silicone implants (Motiva/Mentor), between ₹95,000 and ₹1,55,000 for mastopexy (breast lift surgery), and between ₹1,20,000 and ₹1,95,000 for bilateral reduction mammaplasty. This fee includes Dr. Chintan Gujarathi’s surgical fee, the cost of original FDA-certified implants with warranty cards, state-of-the-art OT facilities at Ruby Hall Clinic or Manipal Hospital Kharadi, anesthesia, specialized post-op surgical bras, and follow-up care.',
+        a: 'The cost of breast surgery in Pune depends on the chosen procedure—such as dual-plane augmentation with US-FDA approved silicone cohesive gel implants (Motiva or Mentor), mastopexy breast lift, or bilateral reduction mammoplasty. Factors including implant profile, tissue volume, hospital OT facilities at Ruby Hall Clinic or Manipal Hospital Kharadi, and post-op support bras are covered transparently. Please consult Dr. Chintan Gujarathi for an in-person consultation and customized cost plan.',
       },
       {
         q: 'Will silicone breast implants feel natural, and where are the scars hidden?',
@@ -2030,7 +2030,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does cancer reconstructive surgery (free flap) cost in Pune?',
-        a: 'The cost of cancer reconstructive surgery depends on the complexity of the defect, the specific free flap utilized (e.g., ALT soft-tissue flap vs. Free Fibula jaw reconstruction vs. DIEP breast flap), and the required ICU stay. In Pune at Ruby Hall Clinic or Manipal Hospital Kharadi, microvascular reconstructive procedures typically range from ₹1,45,000 to ₹2,85,000. Most procedures are eligible for comprehensive coverage under private health insurance, mediclaim policies, and corporate empanelments.',
+        a: 'The cost of oncoplastic reconstructive surgery in Pune depends on the defect size, anatomical location, and specific microvascular free flap utilized (such as an ALT soft-tissue flap, Free Fibula for jaw reconstruction, or DIEP flap), as well as microsurgical ICU care. Reconstructive surgeries performed by Dr. Chintan Gujarathi at Ruby Hall Clinic and Manipal Hospital Kharadi are widely eligible for cashless Mediclaim and corporate insurance coverage. Please consult the doctor for clinical evaluation and transparent package details.',
       },
       {
         q: 'Will donor areas like the leg or thigh recover normal function after flap harvest?',
@@ -2274,7 +2274,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does burn surgery and skin grafting cost in Pune?',
-        a: 'The cost of burn surgery in Pune depends on the total body surface area (TBSA) involved, the depth of the burn, and whether critical ICU care is required. In general, localized skin grafting or contracture release procedures range from ₹45,000 to ₹95,000, while extensive burn management ranges from ₹1,20,000 to ₹2,50,000+. Most acute burn admissions and reconstructive surgeries are eligible for full or partial coverage under health insurance (Mediclaim) policies at Ruby Hall Clinic and Manipal Hospital Kharadi.',
+        a: 'The cost of burn surgery and contracture release in Pune depends on the total body surface area (TBSA) involved, burn depth, whether tangential excision and split-thickness skin grafting are needed, and the complexity of joint contracture releases. Most acute burn management and reconstructive procedures at Ruby Hall Clinic and Manipal Hospital Kharadi are eligible for health insurance (Mediclaim) coverage. Please consult Dr. Chintan Gujarathi for a detailed clinical assessment and cost guidance.',
       },
       {
         q: 'Why are pressure garments important after burn surgery?',
@@ -2518,7 +2518,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does trauma plastic surgery and limb salvage cost in Pune?',
-        a: 'The cost of trauma plastic surgery depends on the severity of the injury, whether single-stage local flap rotation vs. complex microvascular free tissue transfer is needed, and orthopedic co-management. In Pune at Ruby Hall Clinic or Manipal Hospital Kharadi, trauma flap procedures typically range from ₹65,000 to ₹1,75,000. Emergency accident surgeries are covered under comprehensive third-party insurance, Mediclaim policies, and cashless corporate empanelments.',
+        a: 'The cost of trauma plastic surgery in Pune depends on injury severity, soft tissue defect size, bone exposure, and whether local rotational flap coverage or microvascular free tissue transfer is needed. Emergency trauma and limb salvage surgeries at Ruby Hall Clinic and Manipal Hospital Kharadi are generally covered under health insurance (Mediclaim) and corporate cashless policies. Please consult Dr. Chintan Gujarathi for an immediate evaluation and transparent cost structure.',
       },
       {
         q: 'Can a crushed limb with exposed bone be saved instead of amputated?',
@@ -2756,7 +2756,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does hand surgery and carpal tunnel release cost in Pune?',
-        a: 'The cost of hand surgery in Pune depends on whether the procedure is a day-care carpal tunnel decompression, a complex multi-finger tendon/nerve repair, or reconstructive surgery for old trauma. In general, carpal tunnel release ranges from ₹35,000 to ₹65,000 as a day-care procedure. Complex tendon and micro-nerve repairs range from ₹45,000 to ₹85,000, and major hand reconstructions range from ₹75,000 to ₹1,45,000 at Ruby Hall Clinic or Manipal Hospital Kharadi. Most acute trauma and medically necessary hand procedures are covered under health insurance (Mediclaim) and corporate cashless policies.',
+        a: 'The cost of hand surgery in Pune depends on whether the procedure is an endoscopic or open carpal tunnel release, acute tendon/micro-nerve repair, or complex reconstructive surgery for old trauma. Medically necessary hand surgeries performed at Ruby Hall Clinic and Manipal Hospital Kharadi are eligible for health insurance and cashless Mediclaim coverage. Please consult Dr. Chintan Gujarathi for a functional hand evaluation and transparent pricing.',
       },
       {
         q: 'What is WALANT hand surgery and what are its advantages?',
@@ -2998,7 +2998,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does facial bone fracture surgery cost in Pune?',
-        a: 'The cost of facial bone fracture surgery in Pune depends on the number and complexity of the fracture sites (e.g. isolated lower jaw fracture vs. multi-fragment cheekbone and orbital reconstruction), the number of titanium mini-plates required, and hospital room category. At Ruby Hall Clinic (Sassoon Road) and Manipal Hospital (Kharadi), surgery typically ranges from ₹55,000 to ₹1,25,000 for isolated fractures and ₹1,10,000 to ₹2,10,000 for complex panfacial trauma. Most accidental facial fractures are fully eligible for cashless health insurance (Mediclaim) and corporate empanelment coverage.',
+        a: 'The cost of facial bone fracture surgery in Pune depends on the anatomical fracture sites (mandible, zygoma, orbit, or maxilla), the number of titanium mini-plates and micro-screws required, and surgical complexity. Accidental facial fracture repairs at Ruby Hall Clinic (Sassoon Road) and Manipal Hospital (Kharadi) are generally eligible for cashless health insurance (Mediclaim) and corporate coverage. Please consult Dr. Chintan Gujarathi for an accurate assessment and cost breakdown.',
       },
       {
         q: 'Will I have visible scars on my face after fracture surgery?',
@@ -3240,7 +3240,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does chronic wound care and VAC therapy cost in Pune?',
-        a: 'The cost of chronic wound management in Pune depends on the severity and depth of the wound, whether surgical debridement with negative-pressure VAC therapy is required, and if reconstructive flap coverage is necessary. Outpatient debridement and localized VAC therapy generally range from ₹35,000 to ₹75,000. Complex Stage 3/4 bedsore flap reconstructions typically range from ₹65,000 to ₹1,45,000. Most surgical wound care procedures and diabetic limb salvage surgeries are eligible for cashless Mediclaim and corporate insurance coverage.',
+        a: 'The cost of chronic wound management and diabetic foot ulcer treatment in Pune depends on wound depth, infection severity, number of negative-pressure wound therapy (VAC) dressings required, and whether flap or graft coverage is performed. Most surgical wound care and diabetic limb salvage procedures at Ruby Hall Clinic and Manipal Hospital Kharadi are covered under health insurance policies. Please consult Dr. Chintan Gujarathi for an assessment and treatment plan.',
       },
       {
         q: 'How does the negative-pressure VAC therapy machine work at home?',
@@ -3482,7 +3482,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does AV fistula surgery cost in Pune?',
-        a: 'The cost of AV fistula creation in Pune depends on whether a standard distal radiocephalic fistula, an upper arm brachiocephalic fistula, or a complex basilic vein transposition is required. In general, standard radiocephalic and brachiocephalic fistulas performed under local anesthesia range from ₹35,000 to ₹65,000 at Ruby Hall Clinic (Sassoon Road) and Manipal Hospital (Kharadi). Complex basilic vein transpositions range from ₹55,000 to ₹95,000. Most procedures are fully covered under health insurance (Mediclaim) policies and corporate cashless tie-ups.',
+        a: 'The cost of AV fistula creation for hemodialysis in Pune depends on vessel caliber and whether a standard radiocephalic wrist fistula, brachiocephalic elbow fistula, or complex basilic vein transposition is required. Vascular access procedures at Ruby Hall Clinic (Sassoon Road) and Manipal Hospital (Kharadi) are commonly eligible for cashless Mediclaim and health insurance coverage. Please consult Dr. Chintan Gujarathi for vascular mapping and cost details.',
       },
       {
         q: 'What does the "thrill" and "bruit" mean in my AV fistula?',
@@ -3724,7 +3724,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does cosmetic facial suturing cost in Pune?',
-        a: 'The cost of cosmetic facial suturing in Pune depends on the length, depth, and anatomical location of the cut (e.g. simple forehead cut vs. complex through-and-through lip or eyelid tear). Simple localized lacerations under local anesthesia typically range from ₹8,000 to ₹18,000. Complex multi-layer repairs involving eyelid margins, lip vermilion, or cartilage range from ₹15,000 to ₹35,000 at Ruby Hall Clinic and Manipal Hospital Kharadi. Emergency accidental trauma suturing is covered under most health insurance (Mediclaim) policies.',
+        a: 'The cost of emergency cosmetic facial suturing in Pune depends on the laceration length, depth, tissue layers involved (such as lip vermilion, eyelid margin, or facial nerve branch proximity), and whether local or twilight anesthesia is used. Emergency wound closure at Ruby Hall Clinic and Manipal Hospital Kharadi is eligible for Mediclaim accidental coverage. Please consult Dr. Chintan Gujarathi for immediate clinical evaluation and transparent pricing.',
       },
       {
         q: 'When should facial stitches be removed?',
@@ -3966,7 +3966,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does torn earlobe repair and otoplasty cost in Pune?',
-        a: 'The cost of torn earlobe repair in Pune typically ranges from ₹6,500 to ₹12,000 for a single earlobe, and ₹11,000 to ₹18,000 for both earlobes, depending on whether it is a partial stretched slit, a complete split tear, or requires simultaneous re-piercing. Corrective otoplasty (ear pinning for prominent ears) ranges from ₹45,000 to ₹85,000 for both ears at Ruby Hall Clinic and Manipal Hospital Kharadi.',
+        a: 'The cost of earlobule repair in Pune depends on whether one or both earlobes are treated, whether a simple closure or complex micro-flap repair is required, and whether surgical ear re-piercing is performed simultaneously. Prominent ear correction (otoplasty) depends on cartilage remodeling complexity. Both are performed as comfortable day-care procedures at Ruby Hall Clinic and Manipal Hospital Kharadi. Please consult Dr. Chintan Gujarathi for a clinical assessment and exact pricing.',
       },
       {
         q: 'When can I wear earrings again after earlobe repair?',
@@ -4208,7 +4208,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does cleft lip and cleft palate surgery cost in Pune?',
-        a: 'The cost of cleft surgery in Pune typically ranges from ₹45,000 to ₹85,000 for cleft lip cheiloplasty and ₹55,000 to ₹95,000 for cleft palate palatoplasty, depending on room category and whether unilateral or bilateral repair is required. Surgeries are performed at Ruby Hall Clinic (Sassoon Road) and Manipal Hospital (Kharadi). Many procedures are eligible for coverage under pediatric health insurance policies, corporate employer schemes, and charitable healthcare partnerships.',
+        a: 'The cost of pediatric plastic surgery in Pune depends on whether primary cleft lip repair, two-flap palatoplasty, congenital anomaly correction, or secondary speech revision is performed. Cleft and congenital reconstructive surgeries at Ruby Hall Clinic and Manipal Hospital Kharadi are often supported by specialized health schemes and insurance policies. Please consult Dr. Chintan Gujarathi for a compassionate evaluation and transparent cost guidance.',
       },
       {
         q: 'Will my child speak normally after cleft palate surgery?',
@@ -4450,7 +4450,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does scar revision and keloid treatment cost in Pune?',
-        a: 'The cost of scar revision in Pune depends on the size, location, and complexity of the scar. Localized facial scar revision under local anesthesia typically ranges from ₹15,000 to ₹35,000. Extensive revisions or multi-flap contracture releases range from ₹35,000 to ₹75,000. For keloids, intralesional triamcinolone + 5-FU therapy ranges from ₹2,500 to ₹5,500 per session, while surgical keloid excision with multimodal adjuvant therapy ranges from ₹18,000 to ₹45,000 at Ruby Hall Clinic and Manipal Hospital Kharadi.',
+        a: 'The cost of scar revision and keloid treatment in Pune depends on scar size, anatomical location, and whether surgical geometric broken-line excision, Z-plasty/W-plasty contracture release, or multi-session intralesional corticosteroid and 5-FU therapy is indicated. Day-care procedures are performed at Ruby Hall Clinic and Manipal Hospital Kharadi. Please consult Dr. Chintan Gujarathi for a scar evaluation and customized cost breakdown.',
       },
       {
         q: 'Why do keloids recur after surgery and how does Dr. Gujarathi prevent this?',
@@ -4722,7 +4722,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does nail bed injury and fingertip repair cost in Pune?',
-        a: 'The cost of nail bed and fingertip repair in Pune typically ranges from ₹10,000 to ₹25,000 for emergency subungual hematoma drainage, nail bed laceration repair, and stenting under digital local anesthesia as a day-care procedure. Complex fingertip flap reconstruction (Atasoy/Kutler V-Y flap) or associated distal phalanx fracture fixation ranges from ₹22,000 to ₹45,000 at Ruby Hall Clinic and Manipal Hospital Kharadi, commonly covered under corporate accident mediclaim policies.',
+        a: 'The cost of nail bed and fingertip repair in Pune depends on whether subungual hematoma trephination, germinal matrix micro-suturing, distal phalanx tuft fracture reduction, or local V-Y flap pulp reconstruction is performed. Emergency trauma cases at Ruby Hall Clinic and Manipal Hospital Kharadi are typically covered under Mediclaim health insurance. Please consult Dr. Chintan Gujarathi for clinical evaluation and transparent cost details.',
       },
       {
         q: 'What happens if a crushed nail bed is not sutured by a plastic surgeon?',
@@ -4994,7 +4994,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does cyst, lipoma, or ganglion excision cost in Pune?',
-        a: 'The cost of minor dermatosurgical excision in Pune generally ranges from ₹8,000 to ₹18,000 for a small to moderate sebaceous cyst, wart, or lipoma under local anesthesia as an outpatient day-care procedure. Multiple lipomas, large deep lipomas, or complex wrist ganglion stalk resections adjacent to the radial artery typically range from ₹18,000 to ₹35,000 at Ruby Hall Clinic and Manipal Hospital Kharadi. All charges include routine formal histopathology biopsy examination.',
+        a: 'The cost of dermatosurgical excision in Pune depends on lesion size, depth, anatomical location (such as facial sebaceous cyst, torso lipoma, or wrist joint ganglion), and whether pathology testing is required. Procedures are performed under comfortable local anesthesia on a day-care basis at Ruby Hall Clinic and Manipal Hospital Kharadi. Please consult Dr. Chintan Gujarathi for an examination and transparent cost quote.',
       },
       {
         q: 'Will the surgical removal leave an obvious scar?',
@@ -5265,7 +5265,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does dimple creation and buccal fat removal cost in Pune?',
-        a: 'In Pune, bilateral dimple creation (both cheeks) typically ranges from ₹20,000 to ₹35,000, while unilateral dimpleplasty (single cheek) ranges from ₹14,000 to ₹22,000 under local anesthesia as a day-care procedure. Buccal fat pad reduction costs between ₹35,000 and ₹55,000. When combined, package rates are available. Tongue-tie release (lingual frenuloplasty) ranges from ₹8,000 to ₹18,000 at Ruby Hall Clinic and Manipal Hospital Kharadi.',
+        a: 'The cost of intraoral facial contouring in Pune depends on whether unilateral or bilateral dimple creation is performed, or whether Bichat buccal fat pad excision is selected for cheek contouring. Performed under gentle local anesthesia as walk-in walk-out procedures at Ruby Hall Clinic and Manipal Hospital Kharadi, packages cover surgery, medications, and follow-up reviews. Please consult Dr. Chintan Gujarathi for an aesthetic assessment and exact quote.',
       },
       {
         q: 'Will buccal fat removal make my face look hollow when I get older?',
@@ -5538,7 +5538,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does Botox and dermal fillers cost in Pune?',
-        a: 'Botox pricing in Pune is charged per unit, typically ranging from ₹350 to ₹500 per unit for genuine US-FDA approved Allergan Botox. Treating forehead lines and frown lines usually requires 25 to 45 units (₹10,000 to ₹18,000). Dermal fillers (such as Juvederm Ultra Plus or Voluma) range from ₹22,000 to ₹35,000 per 1 ml syringe depending on the product viscosity and area (tear trough, cheek, or lip). Dr. Gujarathi provides honest assessments during your consultation at Ruby Hall Clinic or Manipal Hospital Kharadi, recommending only the units you genuinely need.',
+        a: 'The cost of non-surgical facial rejuvenation in Pune depends on the number of units of US-FDA approved Botulinum Toxin needed for dynamic wrinkles and the volume (in ml) and viscosity of premium hyaluronic acid dermal fillers (such as Juvederm or Restylane) required for contouring. Dr. Chintan Gujarathi provides honest facial dynamic assessments at Ruby Hall Clinic and Manipal Hospital Kharadi, recommending only what you genuinely need. Please consult the doctor for a customized treatment plan and pricing.',
       },
       {
         q: 'Are dermal filler injections painful and will I have bruises?',
@@ -5810,7 +5810,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does an arm lift and thigh lift cost in Pune?',
-        a: 'The cost of an arm lift (bilateral brachioplasty) in Pune typically ranges from ₹85,000 to ₹1,45,000 depending on whether VASER liposuction is combined and the extent of skin laxity. A medial thigh lift ranges from ₹95,000 to ₹1,65,000. For post-bariatric patients seeking combined contouring (e.g., arm lift + thigh lift or mommy makeover combinations), comprehensive hospital packages are available at Ruby Hall Clinic and Manipal Hospital Kharadi.',
+        a: 'The cost of brachioplasty (arm lift) or medial thigh lift in Pune depends on tissue laxity, incision length (minimal-incision vs. extended), and whether VASER liposuction is combined for circumferential sculpting. For post-bariatric or massive weight loss patients combining procedures, comprehensive hospital packages are arranged at Ruby Hall Clinic and Manipal Hospital Kharadi. Please consult Dr. Chintan Gujarathi for an in-person assessment and transparent quote.',
       },
       {
         q: 'Can liposuction alone fix my loose arm or thigh skin?',
@@ -6082,7 +6082,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does labiaplasty and hymenoplasty cost in Pune?',
-        a: 'In Pune, bilateral labiaplasty (both labia minora) typically ranges from ₹45,000 to ₹75,000 depending on whether clitoral hood reduction is performed concurrently. Hymenoplasty surgery ranges from ₹35,000 to ₹55,000 as a day-care procedure under local anesthesia or twilight sedation. All consultations and procedures at Ruby Hall Clinic and Manipal Hospital Kharadi are handled with absolute confidentiality and privacy.',
+        a: 'The cost of female aesthetic and reconstructive genital surgery in Pune depends on whether bilateral labia minora reduction, concurrent clitoral hood reduction, or reconstructive hymenoplasty is performed. Performed with absolute privacy and confidentiality as day-care procedures at Ruby Hall Clinic and Manipal Hospital Kharadi, all-inclusive packages cover surgery and recovery care. Please consult Dr. Chintan Gujarathi for a confidential consultation and cost details.',
       },
       {
         q: 'How long do I have to wait before having sex after labiaplasty or hymenoplasty?',
@@ -6354,7 +6354,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does peripheral nerve surgery and nerve biopsy cost in Pune?',
-        a: 'In Pune, diagnostic sural nerve and muscle biopsy typically ranges from ₹18,000 to ₹35,000 as a day-care procedure under local anesthesia. Microsurgical enucleation of a peripheral schwannoma or neuroma ranges from ₹30,000 to ₹65,000 depending on the size and nerve location. Traumatic microsurgical nerve repair or nerve grafting ranges from ₹35,000 to ₹85,000 at Ruby Hall Clinic and Manipal Hospital Kharadi, commonly covered by medical insurance.',
+        a: 'The cost of peripheral nerve surgery in Pune depends on whether diagnostic sural nerve or muscle biopsy, microsurgical nerve tumor enucleation, or micro-nerve reconstruction with grafting is required. Medically indicated nerve procedures performed at Ruby Hall Clinic and Manipal Hospital Kharadi are commonly covered by health insurance (Mediclaim). Please consult Dr. Chintan Gujarathi for a neurological surgical evaluation and cost guidance.',
       },
       {
         q: 'What is a schwannoma and is it dangerous or cancerous?',
@@ -6626,7 +6626,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does a Mommy Makeover cost in Pune?',
-        a: 'The cost of a comprehensive Mommy Makeover in Pune typically ranges from ₹1,75,000 to ₹3,25,000 depending on the specific procedures combined (e.g., full tummy tuck + breast lift vs. mini-tuck + breast augmentation with silicone implants vs. VASER 360° liposculpting). Combining procedures in a single surgical session is significantly more cost-effective than undergoing separate operations, saving on multiple hospital admissions, anesthesia charges, and theater fees at Ruby Hall Clinic and Manipal Hospital Kharadi.',
+        a: 'The cost of a Mommy Makeover in Pune depends on the customized combination of procedures selected—such as full or mini abdominoplasty, breast augmentation with silicone implants, mastopexy breast lift, and circumferential VASER 360° liposculpting. Combining surgeries into a single session provides significant financial and recovery advantages compared to separate operations at Ruby Hall Clinic or Manipal Hospital Kharadi. Please consult Dr. Chintan Gujarathi for a personalized consultation and all-inclusive package estimate.',
       },
       {
         q: 'How long should I wait after giving birth or breastfeeding before surgery?',
@@ -6898,7 +6898,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does microvascular surgery cost in Pune?',
-        a: 'The cost of microvascular free tissue transfer in Pune typically ranges from ₹1,25,000 to ₹2,75,000 depending on the complexity of the defect (e.g., ALT soft tissue flap vs. vascularized free fibula bone flap for jaw reconstruction). Operating in high-tier hospital facilities like Ruby Hall Clinic and Manipal Hospital Kharadi ensures state-of-the-art operating microscopes, microsurgical ICU monitoring, and multi-specialty support. Microvascular reconstructive surgery is widely covered by corporate health insurance and government schemes.',
+        a: 'The cost of advanced microvascular free tissue transfer in Pune depends on defect complexity, flap type (such as ALT soft-tissue flap or vascularized free fibula bone flap), vessel anastomosis requirements, and specialized microsurgical ICU monitoring. Operating at tertiary centers like Ruby Hall Clinic and Manipal Hospital Kharadi ensures multi-specialty safety, with extensive coverage under health insurance (Mediclaim) and corporate tie-ups. Please consult Dr. Chintan Gujarathi for an expert clinical evaluation and transparent cost structure.',
       },
       {
         q: 'How long does a microvascular free flap surgery take?',
@@ -7170,7 +7170,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does PRP and GFC hair treatment cost in Pune?',
-        a: 'In Pune, medical-grade PRP hair therapy typically ranges from ₹4,500 to ₹7,500 per session. Advanced Growth Factor Concentrate (GFC) therapy ranges from ₹7,000 to ₹11,000 per session depending on the specialized tube kit used. Cost-effective package rates are available for the recommended 3-session or 4-session series at Ruby Hall Clinic and Manipal Hospital Kharadi.',
+        a: 'The cost of platelet-rich plasma (PRP) and Growth Factor Concentrate (GFC) therapy in Pune depends on whether hair restoration or facial skin rejuvenation is treated, the specialized extraction kits used, and the number of sessions recommended in your treatment protocol. Transparent per-session and package options are available at Ruby Hall Clinic and Manipal Hospital Kharadi. Please consult Dr. Chintan Gujarathi for a clinical scalp or skin evaluation and exact pricing.',
       },
       {
         q: 'What is the difference between standard PRP and GFC (Growth Factor Concentrate)?',
@@ -7431,7 +7431,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much does Botox cost in Pune?',
-        a: 'Botox in Pune is charged per unit, typically ranging from ₹350 to ₹500 per unit for genuine US-FDA approved Allergan Botox. Treating horizontal forehead lines and glabellar frown lines usually requires 25 to 45 units (₹10,000 to ₹18,000). Crow’s feet around both eyes typically require 16 to 24 units. Masseter jaw slimming requires 40 to 60 units. During your consultation at Ruby Hall Clinic or Manipal Hospital Kharadi, Dr. Gujarathi examines your facial dynamics and recommends only the exact units you need.',
+        a: 'Botox treatment cost in Pune depends on the specific facial muscle areas treated (such as forehead lines, crow\\\'s feet, frown lines, or masseter jaw slimming) and the total units of genuine US-FDA approved Botulinum Toxin required. Dr. Chintan Gujarathi examines your facial animation during consultation at Ruby Hall Clinic or Manipal Hospital Kharadi, ensuring natural results while recommending only the precise units needed. Please consult the doctor for a personal evaluation and cost estimate.',
       },
       {
         q: 'Is Botox injection painful?',
@@ -7692,7 +7692,7 @@ export const DETAILED_PROCEDURES: Record<string, DetailedProcedureData> = {
       },
       {
         q: 'How much do dermal fillers cost in Pune?',
-        a: 'Dermal fillers in Pune typically range from ₹22,000 to ₹35,000 per 1 ml syringe for premium US-FDA approved brands like Juvederm (Voluma, Volift, Ultra Plus) and Restylane. Under-eye tear troughs typically require 1 ml; lips typically require 1 ml; and cheek lifting typically requires 1 to 2 ml depending on the degree of volume loss. Dr. Gujarathi provides honest assessments during your consultation at Ruby Hall Clinic or Manipal Hospital Kharadi, recommending only what you genuinely need.',
+        a: 'The cost of dermal fillers in Pune depends on the specific treatment areas (such as tear troughs, lips, cheeks, jawline, or nasolabial folds), the number of syringes needed, and the selected premium US-FDA approved hyaluronic acid formulation (such as Juvederm or Restylane). During your clinical evaluation at Ruby Hall Clinic or Manipal Hospital Kharadi, Dr. Chintan Gujarathi recommends an individualized plan tailored to your facial anatomy. Please consult the doctor for transparent pricing and consultation.',
       },
       {
         q: 'What happens if I do not like the result of my dermal filler?',

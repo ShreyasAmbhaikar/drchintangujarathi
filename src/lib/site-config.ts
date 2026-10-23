@@ -635,7 +635,7 @@ export const SITE_CONFIG = {
     },
     {
       question: "How much does a consultation cost?",
-      answer: "Consultation fees typically range from ₹1,000 to ₹1,200 depending on the hospital location. During the consultation, Dr. Gujarathi provides a comprehensive assessment, discusses treatment options, and provides transparent cost estimates for any recommended procedures.",
+      answer: "Consultation fees follow standard institutional outpatient rates at Ruby Hall Clinic and Manipal Hospital Kharadi. During your comprehensive in-person evaluation, Dr. Gujarathi conducts a thorough clinical examination, discusses customized treatment options, and provides transparent, all-inclusive cost estimates for any recommended procedures.",
     },
   ],
 
